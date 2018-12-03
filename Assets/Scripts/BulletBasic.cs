@@ -12,7 +12,7 @@ public class BulletBasic : MonoBehaviour {
 		rb.velocity = transform.right * speed;
 	}
 
-	void onTriggerEnter2D(Collider2D hitInfo) {
+	void OnTriggerEnter2D(Collider2D hitInfo) {
 		PlayerOne player = hitInfo.GetComponent<PlayerOne>();
 		if(player != null) {
 			player.TakeDamage(damage);
