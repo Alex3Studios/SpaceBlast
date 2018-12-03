@@ -11,12 +11,13 @@ public class PlayerOne : MonoBehaviour {
 		health -= damage;
 
 		if(health <= 0) {
+			Debug.Log("Dead");
 			Die();
 		}
 	}
 
 	void Die() {
-		Instantiate(deathEffect, transform.position, Quaternion.identity);
+		//Instantiate(deathEffect, transform.position, Quaternion.identity);
 		Destroy(gameObject);
 	}
 }

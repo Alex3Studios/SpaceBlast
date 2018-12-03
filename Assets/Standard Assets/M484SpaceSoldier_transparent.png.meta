@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 947f1ef07fade184bb0d9961cc71cb0d
-timeCreated: 1543853444
+timeCreated: 1543857522
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,6 +8,8 @@ TextureImporter:
     21300002: M484SpaceSoldier_transparent_1
     21300004: M484SpaceSoldier_transparent_2
     21300006: M484SpaceSoldier_transparent_3
+    21300008: M484SpaceSoldier_transparent_4
+    21300010: M484SpaceSoldier_transparent_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -102,6 +104,32 @@ TextureImporter:
         y: 322
         width: 8
         height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: M484SpaceSoldier_transparent_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 132
+        width: 27
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: M484SpaceSoldier_transparent_5
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 132
+        width: 27
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
