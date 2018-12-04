@@ -3,13 +3,13 @@
 The attributes used in the game Space Blast! and listed in the following sections are borrowed from and credit goes to:
 
 
-#### Background
+### Background
 
 [Ida Lahti](https://mymblemoments.wordpress.com/tag/video-games/)
 
-#### Character Model  
+### Character Model  
 
-#### Asteroids
+### Asteroids
 
 ### Weapons
 * Pistol - 

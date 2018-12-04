@@ -32,7 +32,9 @@ Description of known problems at a given time.
 
 * ?
 
-## [Attributes](ATTRIBUTES.md)
+## Attributes
+
+See [Attributes.](ATTRIBUTES.md)
 
 ## Authors
 
