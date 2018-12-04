@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMove : MonoBehaviour {
+public class PlayerOneController : MonoBehaviour {
 
 	//Variables
      public float PlayerSpeed = 5f;
