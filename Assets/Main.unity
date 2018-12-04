@@ -995,9 +995,9 @@ GameObject:
   - component: {fileID: 1589823591}
   - component: {fileID: 1589823590}
   - component: {fileID: 1589823589}
-  - component: {fileID: 1589823588}
-  - component: {fileID: 1589823587}
   - component: {fileID: 1589823594}
+  - component: {fileID: 1589823587}
+  - component: {fileID: 1589823586}
   m_Layer: 0
   m_Name: PlayerTwo
   m_TagString: Untagged
@@ -1005,28 +1005,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1589823586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1589823585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d59d1fd8f22333e4285db456c749a3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 1831155262}
+  bulletPrefab: {fileID: 1000011606645570, guid: 3a3a94f0dc4bc7048a62bb93c13d6164,
+    type: 2}
 --- !u!114 &1589823587
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1589823585}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1fc86e34c76aab469ae86cd584e4044, type: 3}
+  m_Script: {fileID: 11500000, guid: 396c3653f21d5ec44bf708172ddd763e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1589823588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1589823585}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ee8e19aff1863447ae545f82be81a9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  PlayerSpeed: 5
+  PlayerRotation: 10
+  IsRight: 0
+  CanFlip: 1
 --- !u!50 &1589823589
 Rigidbody2D:
   serializedVersion: 4

@@ -1,21 +1,21 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using Rewired;
 
-public class PlayerOneShooting : MonoBehaviour {
+public class PlayerTwoShooting : MonoBehaviour {
 
 	public Transform firePoint;
 	public GameObject bulletPrefab;
-	private Player player1;
+	private Player player2;
 
 	void Awake() {
-		player1 = ReInput.players.GetPlayer(0);
+		player2 = ReInput.players.GetPlayer(1);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		PlayerOneController pm = GetComponent<PlayerOneController>();
-		if(player1.GetButtonDown("Shoot")) {
+		PlayerTwoController pm = GetComponent<PlayerTwoController>();
+		if(player2.GetButtonDown("Shoot")) {
 			Shoot();
 			pm.Recoil();
 		}

@@ -1,18 +1,18 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using Rewired;
 
-public class PlayerOneController : MonoBehaviour {
+public class PlayerTwoController : MonoBehaviour {
 
 	//Variables
      public float PlayerSpeed = 5f;
      public float PlayerRotation = 10f;
      public bool IsRight = false;
      public bool CanFlip = true;
-     private Player player1;
+     private Player player2;
 
      void Awake() {
-             player1 = ReInput.players.GetPlayer(0);
+             player2 = ReInput.players.GetPlayer(1);
      }
  
      //Update Function
@@ -21,8 +21,8 @@ public class PlayerOneController : MonoBehaviour {
         //Move
         //float Move = Input.GetAxis ("Horizontal");
         //float MoveVertical = Input.GetAxis ("Vertical");
-        float MoveX = player1.GetAxis("RotateX");
-        float MoveY = player1.GetAxis("RotateY");
+        float MoveX = player2.GetAxis("RotateX");
+        float MoveY = player2.GetAxis("RotateY");
         float heading = Mathf.Atan2(MoveY, MoveX);
 
         transform.rotation = Quaternion.Euler(0f, 0f, heading * Mathf.Rad2Deg);
