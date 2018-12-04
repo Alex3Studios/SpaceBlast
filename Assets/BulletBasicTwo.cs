@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BulletBasic : MonoBehaviour {
+public class BulletBasicTwo : MonoBehaviour {
 
 	public float speed = 20f;
 	public int damage = 350;
@@ -13,7 +13,7 @@ public class BulletBasic : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D hitInfo) {
-		PlayerTwo player = hitInfo.GetComponent<PlayerTwo>();
+		PlayerOne player = hitInfo.GetComponent<PlayerOne>();
 		if(player != null) {
 			player.TakeDamage(damage);
 			Destroy(gameObject);

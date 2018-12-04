@@ -751,7 +751,7 @@ GameObject:
   - 50: {fileID: 1589823589}
   - 114: {fileID: 1589823588}
   - 114: {fileID: 1589823587}
-  - 114: {fileID: 1589823586}
+  - 114: {fileID: 1589823594}
   m_Layer: 0
   m_Name: PlayerTwo
   m_TagString: Untagged
@@ -759,19 +759,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1589823586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1589823585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e40d938787febe044b576f8ad9df7050, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1000
-  deathEffect: {fileID: 0}
 --- !u!114 &1589823587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,7 +771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1831155262}
-  bulletPrefab: {fileID: 1000012472556178, guid: b3873249e6c886b45a5a66b54513f05d,
+  bulletPrefab: {fileID: 1000011606645570, guid: 3a3a94f0dc4bc7048a62bb93c13d6164,
     type: 2}
 --- !u!114 &1589823588
 MonoBehaviour:
@@ -894,6 +881,19 @@ Transform:
   - {fileID: 1831155262}
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!114 &1589823594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1589823585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432962f89bdc4c742a6302e31bbf964d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
+  deathEffect: {fileID: 0}
 --- !u!1 &1759258878
 GameObject:
   m_ObjectHideFlags: 0
