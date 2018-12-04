@@ -32,6 +32,8 @@ Description of known problems at a given time.
 
 * ?
 
+## [Attributes](ATTRIBUTES.md)
+
 ## Authors
 
 * **Alexander Freyr Brynjarsson** - *alexanderb16@ru.is* - [Allifreyr](https://github.com/allifreyr)
