@@ -23,7 +23,7 @@ GameObject:
   - 50: {fileID: 50000013919394674}
   - 58: {fileID: 58000012830056158}
   - 114: {fileID: 114000012356412234}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

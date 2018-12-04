@@ -15,6 +15,7 @@ public class BulletBasic : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D hitInfo) {
 		PlayerOne playerOne = hitInfo.GetComponent<PlayerOne>();
 		PlayerTwo playerTwo = hitInfo.GetComponent<PlayerTwo>();
+		
 		if(playerTwo != null) {
 			playerTwo.TakeDamage(damage);
 			Destroy(gameObject);
