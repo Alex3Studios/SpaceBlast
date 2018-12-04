@@ -10,6 +10,7 @@ public class PlayerTwoBulletBasic : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb.velocity = transform.right * speed;
+		Destroy(gameObject, 1);
 	}
 
 	void OnTriggerEnter2D(Collider2D hitInfo) {

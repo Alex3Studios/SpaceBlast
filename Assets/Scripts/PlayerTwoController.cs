@@ -30,6 +30,7 @@ public class PlayerTwoController : MonoBehaviour {
 
 
      public void Recoil() {
-             GetComponent<Rigidbody2D>().AddForce(Vector2.left * 100 * 100);
+
+            GetComponent<Rigidbody2D>().AddForce(transform.right * -1 * 7, ForceMode2D.Impulse);
      }
 }
