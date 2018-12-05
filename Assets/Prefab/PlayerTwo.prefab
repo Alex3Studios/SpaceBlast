@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1120864252758598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.19, y: 0.043, z: 0}
+  m_LocalPosition: {x: 0.929, y: 0.043, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4634760770950156}
@@ -96,7 +96,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1757260420453778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.093164, y: -17.028934, z: 0}
+  m_LocalPosition: {x: 26.19, y: -16.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4332450088458392}
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1000
   firePoint: {fileID: 4332450088458392}
-  bulletPrefab: {fileID: 1000012472556178, guid: b3873249e6c886b45a5a66b54513f05d,
+  bulletPrefab: {fileID: 1000012472556178, guid: df4449626a8841b4895c6fe6c0a9d466,
     type: 2}
   deathEffect: {fileID: 0}
 --- !u!212 &212474606934514276

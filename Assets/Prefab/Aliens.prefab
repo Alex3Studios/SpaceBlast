@@ -85,7 +85,7 @@ MonoBehaviour:
   projectile: {fileID: 1014810299074024, guid: dde2059648510e4438c8264c6ee17a48, type: 2}
   weapon: {fileID: 1436978397492686}
   projectileSpeed: 50
-  cooldown: 2
+  cooldown: 1
   projectileMode: 1
 --- !u!212 &212953949337444064
 SpriteRenderer:
