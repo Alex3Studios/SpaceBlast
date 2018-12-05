@@ -7,6 +7,9 @@ public class AsteroidScript : MonoBehaviour {
 	public float maxThrust;
 	public float maxTorque;
 	public Rigidbody2D rb;
+	public int asteroidSize;	// 3 = Large, 2 = Medium, 1 = Small
+	public GameObject asteroidMedium;
+	public GameObject asteroidSmall;
 
 	// Use this for initialization
 	void Start () {
@@ -20,5 +23,27 @@ public class AsteroidScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Physics2D.IgnoreLayerCollision(9,10);
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		// Check if it's a bullet
+		if(other.CompareTag("bullet")) {
+			Debug.Log("Hit by " + other.name);
+			// Destroy the bullet
+			Destroy(other.gameObject);
+			// Check the size of the asteroid and spawn in the next smaller size
+			if(asteroidSize == 3) {
+				// Spawn two medium asteroids
+				Instantiate(asteroidMedium, transform.position, transform.rotation);
+				Instantiate(asteroidMedium, transform.position, transform.rotation);
+			}
+			else if(asteroidSize == 2) {
+				// Spawn two small asteroids
+				Instantiate(asteroidSmall, transform.position, transform.rotation);
+				Instantiate(asteroidSmall, transform.position, transform.rotation);
+			}
+			// Remove the asteroid
+			Destroy(gameObject);
+		}
 	}
 }
