@@ -27,7 +27,7 @@ public class Ammo : MonoBehaviour
         }
         else if (playerOne != null)
         {
-            playerTwo.TakeDamage(damage);
+            playerOne.TakeDamage(damage);
             Destroy(gameObject);
         }
         else if (playerOne == null && playerTwo == null)

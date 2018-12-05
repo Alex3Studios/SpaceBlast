@@ -32,6 +32,14 @@ public class PlayerTwo : MonoBehaviour
             Shoot();
             Recoil(7);
         }
+        if (player2.GetButtonDown("PowerUp"))
+        {
+            GameObject weaponmanagerObject = GameObject.Find("PlayerTwoWeaponSlot");
+            WeaponManager wm = weaponmanagerObject.GetComponent<WeaponManager>();
+            int recoil = wm.Shoot();
+            //pm.Recoil(recoil);
+
+        }
     }
 
     void Shoot()

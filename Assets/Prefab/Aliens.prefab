@@ -50,7 +50,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1436978397492686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.18, y: 14.91, z: 0}
+  m_LocalPosition: {x: 9.116845, y: -6.6951437, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4968680385764496}
@@ -64,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1989737555566238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.77, y: 0.03, z: 0}
+  m_LocalPosition: {x: 1.04, y: 0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4616098887539378}
@@ -85,7 +85,7 @@ MonoBehaviour:
   projectile: {fileID: 1014810299074024, guid: dde2059648510e4438c8264c6ee17a48, type: 2}
   weapon: {fileID: 1436978397492686}
   projectileSpeed: 50
-  cooldown: 2
+  cooldown: 1
   projectileMode: 1
 --- !u!212 &212953949337444064
 SpriteRenderer:
