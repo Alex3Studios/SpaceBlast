@@ -10,7 +10,7 @@ public class WeaponManager : MonoBehaviour
 
 
     // Use this for initialization
-    void Start()
+    public void initialize()
     {
         wpn = activeWeapon.GetComponent<Weapons>();
         GetComponent<SpriteRenderer>().sprite = wpn.sprite;
