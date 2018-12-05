@@ -30,8 +30,9 @@ public class Weapons : MonoBehaviour
         if (playerTwo != null)
         {
             GameObject weaponSlot = playerTwo.transform.GetChild(1).gameObject;
-            Debug.Log(weaponSlot);
-            weaponSlot.GetComponent<SpriteRenderer>().sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+            WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
+            activateWeapon.activeWeapon = weapon;
+            activateWeapon.initialize();
             Destroy(gameObject);
         }
         if (playerOne != null)

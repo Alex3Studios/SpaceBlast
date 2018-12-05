@@ -17,12 +17,11 @@ public class WeaponManager : MonoBehaviour
     }
     public int Shoot()
     {
-        Vector3 rotation = transform.parent.localScale.x == 1 ? Vector3.zero : Vector3.forward * 180;
-        GameObject projectile = (GameObject)Instantiate(wpn.projectile, transform.position + activeWeapon.transform.GetChild(0).localPosition, Quaternion.Euler(rotation));
-
+        GameObject projectile = (GameObject)Instantiate(wpn.projectile, transform.position + transform.parent.rotation * (activeWeapon.transform.GetChild(0).localPosition), transform.parent.rotation);
+        Debug.Log(activeWeapon.transform.GetChild(0).gameObject.name);
         if (wpn.projectileMode == Weapons.Modes.Straight)
         {
-            projectile.GetComponent<Rigidbody2D>().velocity = transform.parent.localScale.x * Vector2.right * wpn.projectileSpeed;
+            projectile.GetComponent<Rigidbody2D>().velocity = transform.parent.right * wpn.projectileSpeed;
         }
         return 0;
     }
