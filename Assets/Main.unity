@@ -168,11 +168,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4616098887539378, guid: d4dc894dade028d40bf451672afad91f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.62
+      value: 22.55
       objectReference: {fileID: 0}
     - target: {fileID: 4616098887539378, guid: d4dc894dade028d40bf451672afad91f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.75
+      value: -16.04
       objectReference: {fileID: 0}
     - target: {fileID: 4616098887539378, guid: d4dc894dade028d40bf451672afad91f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -198,12 +198,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114372649479688292, guid: d4dc894dade028d40bf451672afad91f,
-        type: 2}
-      propertyPath: weapon
-      value: 
-      objectReference: {fileID: 1436978397492686, guid: d4dc894dade028d40bf451672afad91f,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4dc894dade028d40bf451672afad91f, type: 2}
   m_IsPrefabAsset: 0
@@ -683,6 +677,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &952305141
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4459238612455928, guid: f40770828f508eb48990fdebc249e67a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -10.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459238612455928, guid: f40770828f508eb48990fdebc249e67a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459238612455928, guid: f40770828f508eb48990fdebc249e67a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459238612455928, guid: f40770828f508eb48990fdebc249e67a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459238612455928, guid: f40770828f508eb48990fdebc249e67a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459238612455928, guid: f40770828f508eb48990fdebc249e67a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459238612455928, guid: f40770828f508eb48990fdebc249e67a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459238612455928, guid: f40770828f508eb48990fdebc249e67a, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f40770828f508eb48990fdebc249e67a, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1067394769
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,7 +972,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 26d48a73084bf472abb3860fe0754fb0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e3a9b72f6cd0c1a499e141718548707e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -945,7 +981,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!4 &1662064902
 Transform:
@@ -1112,7 +1148,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 17.372013
+  orthographic size: 16.932318
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1135,7 +1171,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1759258878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.65, y: -5, z: -10}
+  m_LocalPosition: {x: 5.65, y: -7.48, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

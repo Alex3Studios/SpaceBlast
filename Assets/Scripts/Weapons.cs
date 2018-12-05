@@ -34,7 +34,7 @@ public class Weapons : MonoBehaviour
             WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
             activateWeapon.activeWeapon = weapon;
             activateWeapon.initialize();
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
         if (playerOne != null)
         {
@@ -42,8 +42,7 @@ public class Weapons : MonoBehaviour
             WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
             activateWeapon.activeWeapon = weapon;
             activateWeapon.initialize();
-
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
