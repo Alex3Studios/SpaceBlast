@@ -16,7 +16,7 @@ public class WeaponManager : MonoBehaviour
         wpn = activeWeapon.GetComponent<Weapons>();
         GetComponent<SpriteRenderer>().sprite = wpn.sprite;
     }
-    public int Shoot()
+    public float Shoot()
     {
         if(canshoot)
         {
@@ -24,11 +24,11 @@ public class WeaponManager : MonoBehaviour
             StartCoroutine("Cooldown");
 
             GameObject projectile = (GameObject)Instantiate(wpn.projectile, transform.position + transform.parent.rotation * (activeWeapon.transform.GetChild(0).localPosition), transform.parent.rotation);
-            Debug.Log(activeWeapon.transform.GetChild(0).gameObject.name);
             if (wpn.projectileMode == Weapons.Modes.Straight)
             {
                 projectile.GetComponent<Rigidbody2D>().velocity = transform.parent.right * wpn.projectileSpeed;
             }
+            return wpn.recoil;
         }
         return 0;
     }

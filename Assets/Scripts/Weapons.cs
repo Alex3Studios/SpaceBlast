@@ -13,6 +13,7 @@ public class Weapons : MonoBehaviour
     public GameObject weapon;
     public float projectileSpeed;
     public float cooldown;
+    public float recoil;
     public Modes projectileMode;
 
 
