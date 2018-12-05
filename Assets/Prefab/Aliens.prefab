@@ -21,10 +21,14 @@ GameObject:
   - component: {fileID: 4616098887539378}
   - component: {fileID: 212953949337444064}
   - component: {fileID: 114372649479688292}
+<<<<<<< HEAD
+  - component: {fileID: 61105989064149948}
+=======
   - component: {fileID: 61814550937585186}
+>>>>>>> b05382b48d939c57f28597f607d52b7003a7d446
   m_Layer: 0
   m_Name: Aliens
-  m_TagString: Untagged
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +43,7 @@ GameObject:
   - component: {fileID: 4968680385764496}
   m_Layer: 0
   m_Name: FirePoint
-  m_TagString: Untagged
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +75,11 @@ Transform:
   m_Father: {fileID: 4616098887539378}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+--- !u!61 &61105989064149948
+=======
 --- !u!61 &61814550937585186
+>>>>>>> b05382b48d939c57f28597f607d52b7003a7d446
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
