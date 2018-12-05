@@ -36,7 +36,7 @@ public class PlayerTwo : MonoBehaviour
         {
             GameObject weaponmanagerObject = GameObject.Find("PlayerTwoWeaponSlot");
             WeaponManager wm = weaponmanagerObject.GetComponent<WeaponManager>();
-            int recoil = wm.Shoot();
+            float recoil = wm.Shoot();
             Recoil(recoil);
 
         }
@@ -46,7 +46,7 @@ public class PlayerTwo : MonoBehaviour
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
-    public void Recoil(int recoil)
+    public void Recoil(float recoil)
     {
 
         GetComponent<Rigidbody2D>().AddForce(transform.right * -1 * recoil, ForceMode2D.Impulse);
