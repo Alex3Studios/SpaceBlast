@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerTwoBulletBasic : MonoBehaviour {
+public class BasicBullet : MonoBehaviour {
 
 	public float speed = 20f;
 	public int damage = 350;
@@ -16,11 +16,16 @@ public class PlayerTwoBulletBasic : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D hitInfo) {
 		PlayerOne playerOne = hitInfo.GetComponent<PlayerOne>();
 		PlayerTwo playerTwo = hitInfo.GetComponent<PlayerTwo>();
-		if(playerOne != null) {
+		
+		if(playerTwo != null) {
+			playerTwo.TakeDamage(damage);
+			Destroy(gameObject);
+		}
+		else if(playerOne != null) {
 			playerOne.TakeDamage(damage);
 			Destroy(gameObject);
 		}
-		if(playerTwo == null) {
+		else if(playerOne == null && playerTwo == null) {
 			Destroy(gameObject);
 		}
 	}

@@ -1,16 +1,16 @@
-﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class PlayerOneBulletBasic : MonoBehaviour {
+public class Ammo : MonoBehaviour {
 
-	public float speed = 20f;
-	public int damage = 350;
+	public int damage;
 	public Rigidbody2D rb;
+    public int destroytimer;
 
 	// Use this for initialization
 	void Start () {
-		rb.velocity = transform.right * speed;
-		Destroy(gameObject, 1);
+		Destroy(gameObject, destroytimer);
 	}
 
 	void OnTriggerEnter2D(Collider2D hitInfo) {
@@ -21,8 +21,12 @@ public class PlayerOneBulletBasic : MonoBehaviour {
 			playerTwo.TakeDamage(damage);
 			Destroy(gameObject);
 		}
-		if(playerOne == null) {
+		else if(playerOne != null) {
+            playerTwo.TakeDamage(damage);
 			Destroy(gameObject);
 		}
+        else if(playerOne == null && playerTwo == null) {
+            Destroy(gameObject);
+        }
 	}
 }

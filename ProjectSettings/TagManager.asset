@@ -47,6 +47,9 @@ TagManager:
   - name: Player
     uniqueID: 4198725359
     locked: 0
+  - name: Guns
+    uniqueID: 3149217723
+    locked: 0
   - name: Terrain
     uniqueID: 3673820267
     locked: 0
