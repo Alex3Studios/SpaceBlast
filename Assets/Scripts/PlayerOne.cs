@@ -19,9 +19,6 @@ public class PlayerOne : MonoBehaviour
     //Update Function
     void Update()
     {
-        //Move
-        //float Move = Input.GetAxis ("Horizontal");
-        //float MoveVertical = Input.GetAxis ("Vertical");
         float MoveX = player1.GetAxis("RotateX");
         float MoveY = player1.GetAxis("RotateY");
         float heading = Mathf.Atan2(MoveY, MoveX);
@@ -38,7 +35,7 @@ public class PlayerOne : MonoBehaviour
             GameObject weaponmanagerObject = GameObject.Find("PlayerOneWeaponSlot");
             WeaponManager wm = weaponmanagerObject.GetComponent<WeaponManager>();
             int recoil = wm.Shoot();
-            //pm.Recoil(recoil);
+            Recoil(recoil);
 
         }
     }

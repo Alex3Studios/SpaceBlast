@@ -37,7 +37,7 @@ public class PlayerTwo : MonoBehaviour
             GameObject weaponmanagerObject = GameObject.Find("PlayerTwoWeaponSlot");
             WeaponManager wm = weaponmanagerObject.GetComponent<WeaponManager>();
             int recoil = wm.Shoot();
-            //pm.Recoil(recoil);
+            Recoil(recoil);
 
         }
     }
