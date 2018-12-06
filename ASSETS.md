@@ -1,6 +1,6 @@
-## Attributes in Space Blast!
+## Assets in Space Blast!
 
-The attributes used in the game Space Blast! and listed in the following sections are borrowed from and credit goes to:
+The assets used in the game Space Blast! and listed in the following sections are borrowed from and credit goes to:
 
 
 ### Background
