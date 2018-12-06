@@ -8,12 +8,14 @@ public class PlayerOne : MonoBehaviour
     public int health = 1000;
     public Transform firePoint;
     public GameObject bulletPrefab;
+    bool scoreCheck;
     private Player player1;
     public GameObject deathEffect;
 
     void Start()
     {
         ScoreText.PlayerOneHealthValue = health;
+        scoreCheck = true;
     }
 
     void Awake()
@@ -56,19 +58,27 @@ public class PlayerOne : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        ScoreText.PlayerOneHealthValue = health;
 
         if (health <= 0)
         {
+            ScoreText.PlayerOneHealthValue = 0;
             Debug.Log("Dead");
             Die();
+        }
+        else
+        {
+            ScoreText.PlayerOneHealthValue = health;
         }
     }
     void Die()
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-        ScoreText.PlayerTwoScoreValue += 1;
+        if (scoreCheck == true)
+        {
+            scoreCheck = false;
+            Destroy(gameObject);
+            ScoreText.PlayerTwoScoreValue += 1;
+        }
     }
 
 }
