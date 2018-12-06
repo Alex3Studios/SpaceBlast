@@ -16,7 +16,6 @@ public class Crate : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D hitInfo)
     {
-		Debug.Log(hitInfo);
         PlayerOne playerOne = hitInfo.GetComponent<PlayerOne>();
         PlayerTwo playerTwo = hitInfo.GetComponent<PlayerTwo>();
 

@@ -98,7 +98,7 @@ public class Timer : MonoBehaviour
         else
         {
             var playerTwo = GameObject.Find("PlayerTwo");
-            if (GameObject.Find("PlayerOne") == null)
+            if (GameObject.Find("PlayerTwo") == null)
                 playerTwo = GameObject.Find("PlayerTwo(Clone)");
             playerTwoX = playerTwo.transform.position.x;
             playerTwoY = playerTwo.transform.position.y;
