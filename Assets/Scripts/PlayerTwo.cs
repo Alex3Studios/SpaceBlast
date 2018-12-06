@@ -67,5 +67,6 @@ public class PlayerTwo : MonoBehaviour
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        ScoreText.PlayerOneScoreValue += 1;
     }
 }
