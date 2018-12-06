@@ -27,12 +27,14 @@ public class Weapons : MonoBehaviour
     {
         PlayerOne playerOne = hitInfo.GetComponent<PlayerOne>();
         PlayerTwo playerTwo = hitInfo.GetComponent<PlayerTwo>();
+        string replaceCloneText = "(Clone)";
+        string weaponName = weapon.name.Replace(replaceCloneText, "");  //Removes (Clone) from a weapons name
 
         if (playerTwo != null)
         {
             GameObject weaponSlot = playerTwo.transform.GetChild(1).gameObject;
             WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
-            GameObject wep = (GameObject)Resources.Load("Prefab/Guns/" + weapon.name, typeof(GameObject));
+            GameObject wep = (GameObject)Resources.Load("Prefab/Guns/" + weaponName, typeof(GameObject));
             activateWeapon.activeWeapon = wep;
             activateWeapon.initialize();
 
@@ -40,10 +42,9 @@ public class Weapons : MonoBehaviour
         }
         if (playerOne != null)
         {
-            Debug.Log(weapon.name);
             GameObject weaponSlot = playerOne.transform.GetChild(1).gameObject;
             WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
-            GameObject wep = (GameObject)Resources.Load("Prefab/Guns/" + weapon.name, typeof(GameObject));
+            GameObject wep = (GameObject)Resources.Load("Prefab/Guns/" + weaponName, typeof(GameObject));
             activateWeapon.activeWeapon = wep;
             activateWeapon.initialize();
 

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61814550937585186}
   m_Layer: 0
   m_Name: Aliens
-  m_TagString: bullet
+  m_TagString: Guns
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
