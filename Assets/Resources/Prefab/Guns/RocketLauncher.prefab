@@ -112,7 +112,7 @@ MonoBehaviour:
   weapon: {fileID: 1335748679980986}
   projectileSpeed: 40
   cooldown: 2
-  recoil: 0
+  recoil: 50
   projectileMode: 1
 --- !u!212 &212281593149157168
 SpriteRenderer:

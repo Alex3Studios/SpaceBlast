@@ -28,7 +28,6 @@ public class AsteroidScript : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		// Check if it's a bullet
 		if(other.CompareTag("bullet")) {
-			Debug.Log("Hit by " + other.name);
 			// Destroy the bullet
 			Destroy(other.gameObject);
 			// Check the size of the asteroid and spawn in the next smaller size

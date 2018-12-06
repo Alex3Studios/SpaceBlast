@@ -23,10 +23,21 @@ public class WeaponManager : MonoBehaviour
             canshoot = false;
             StartCoroutine("Cooldown");
 
-            GameObject projectile = (GameObject)Instantiate(wpn.projectile, transform.position + transform.parent.rotation * (activeWeapon.transform.GetChild(0).localPosition), transform.parent.rotation);
             if (wpn.projectileMode == Weapons.Modes.Straight)
             {
+                GameObject projectile = (GameObject)Instantiate(wpn.projectile, transform.position + transform.parent.rotation * (activeWeapon.transform.GetChild(0).localPosition), transform.parent.rotation);
                 projectile.GetComponent<Rigidbody2D>().velocity = transform.parent.right * wpn.projectileSpeed;
+            }
+            if(wpn.projectileMode == Weapons.Modes.Burst)
+            {
+                GameObject projectile = (GameObject)Instantiate(wpn.projectile, transform.position + transform.parent.rotation * (activeWeapon.transform.GetChild(0).localPosition), transform.parent.rotation);
+                projectile.GetComponent<Rigidbody2D>().velocity = transform.parent.right * wpn.projectileSpeed;
+                GameObject projectile2 = (GameObject)Instantiate(wpn.projectile, transform.position + transform.parent.rotation * (activeWeapon.transform.GetChild(0).localPosition * 2), transform.parent.rotation);
+                projectile2.GetComponent<Rigidbody2D>().velocity = transform.parent.right * wpn.projectileSpeed;
+                GameObject projectile3 = (GameObject)Instantiate(wpn.projectile, transform.position + transform.parent.rotation * (activeWeapon.transform.GetChild(0).localPosition * 3), transform.parent.rotation);
+                projectile3.GetComponent<Rigidbody2D>().velocity = transform.parent.right * wpn.projectileSpeed;
+
+                 return (wpn.recoil * 3);
             }
             return wpn.recoil;
         }
