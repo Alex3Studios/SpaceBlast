@@ -32,17 +32,22 @@ public class Weapons : MonoBehaviour
         {
             GameObject weaponSlot = playerTwo.transform.GetChild(1).gameObject;
             WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
-            activateWeapon.activeWeapon = weapon;
+            GameObject wep = (GameObject)Resources.Load("Prefab/Guns/" + weapon.name, typeof(GameObject));
+            activateWeapon.activeWeapon = wep;
             activateWeapon.initialize();
-            //Destroy(gameObject);
+
+            Destroy(gameObject);
         }
         if (playerOne != null)
         {
+            Debug.Log(weapon.name);
             GameObject weaponSlot = playerOne.transform.GetChild(1).gameObject;
             WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
-            activateWeapon.activeWeapon = weapon;
+            GameObject wep = (GameObject)Resources.Load("Prefab/Guns/" + weapon.name, typeof(GameObject));
+            activateWeapon.activeWeapon = wep;
             activateWeapon.initialize();
-            //Destroy(gameObject);
+
+            Destroy(gameObject);
         }
     }
 }
