@@ -9,11 +9,14 @@ public class Explode : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-         explosion = (GameObject)Resources.Load("Prefab/Ammo/Explosion", typeof(GameObject));
+        explosion = (GameObject)Resources.Load("Prefab/Ammo/Explosion", typeof(GameObject));
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Instantiate(explosion, transform.position, transform.rotation);
+        if (hitInfo.tag != "Guns")
+        {
+            Instantiate(explosion, transform.position, transform.rotation);
+        }
     }
 }

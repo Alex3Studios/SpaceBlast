@@ -6,49 +6,110 @@ public class Timer : MonoBehaviour
 {
 
     string[] weaponList = { "Aliens", "RocketLauncher" };       //Fix later for final handin, this is just a temp fix
-    float[] weaponPosX = { 5.5f, -10.06f, 20.48f, 14.47f, 14.47f, -1.02f, -1.02f };
-    float[] weaponPosY = { -5.5f, -15.01f, 3.57f, -0.47f, -10.62f, -0.47f, -10.62f };
+    float x1, x2, y1, y2;
+    public float respawnTimePlayer;
+    float playerRespawnTimer;
 
-    public float initialCountdown = 5;
-    public int minSpawnTime;
-    public int maxSpawnTime;
+    public float initialCountdownGun = 5;
+    public int minSpawnTimeGun;
+    public int maxSpawnTimeGun;
+
 
     // Use this for initialization
     void Start()
     {
-
+        playerRespawnTimer = respawnTimePlayer;
     }
 
     // Update is called once per frame
     void Update()
     {
-        initialCountdown -= Time.deltaTime;
-        if (initialCountdown <= 0)
+        initialCountdownGun -= Time.deltaTime;
+        if (initialCountdownGun <= 0)
         {
-            initialCountdown = Random.Range(minSpawnTime, maxSpawnTime);
+            initialCountdownGun = Random.Range(minSpawnTimeGun, maxSpawnTimeGun);
             SpawnRandomWeapon();
         }
+
+        if (GameObject.Find("PlayerOne") == null && GameObject.Find("PlayerOne(Clone)") == null)
+        {
+            playerRespawnTimer -= Time.deltaTime;
+            if (playerRespawnTimer <= 0)
+                SpawnPlayer("One");
+        }
+        else if (GameObject.Find("PlayerTwo") == null && GameObject.Find("PlayerTwo(Clone)") == null)
+        {
+            respawnTimePlayer -= Time.deltaTime;
+            if (respawnTimePlayer <= 0)
+                SpawnPlayer("Two");
+        }
+
+    }
+    void GenerateRandomPosition()
+    {
+        x1 = Random.Range(-16.5f, 27.5f);
+        x2 = Random.Range(-16.5f, 27.5f);
+        y1 = Random.Range(-18f, 8.5f);
+        y2 = Random.Range(-18f, 8.5f);
+        if (System.Math.Abs(x1 - x2) < 8 || System.Math.Abs(y1 - y2) < 8)
+            GenerateRandomPosition();
     }
 
     void SpawnRandomWeapon()
     {
-        int spawnLoc = Random.Range(0, 6);
-        int spawnLoc2 = Random.Range(0, 6);
-        while (true)
-        {
-            if (spawnLoc == spawnLoc2)
-            {
-                spawnLoc2 = Random.Range(0, 6);
-            }
-            else
-                break;
-        }
-        Vector2 pos = new Vector2(weaponPosX[spawnLoc], weaponPosY[spawnLoc]);
-        Vector2 pos2 = new Vector2(weaponPosX[spawnLoc2], weaponPosY[spawnLoc2]);
+        GenerateRandomPosition();
+        Vector2 pos = new Vector2(x1, y1);
+        Vector2 pos2 = new Vector2(x2, y2);
 
-        GameObject wep = (GameObject)Resources.Load("Prefab/Guns/" + weaponList[Random.Range(0, 1)], typeof(GameObject));
+        GameObject wep = (GameObject)Resources.Load("Prefab/Guns/" + weaponList[Random.Range(0, 2)], typeof(GameObject));
         Instantiate(wep, pos, transform.rotation);
-        wep = (GameObject)Resources.Load("Prefab/Guns/" + weaponList[Random.Range(0, 1)], typeof(GameObject));
+        wep = (GameObject)Resources.Load("Prefab/Guns/" + weaponList[Random.Range(0, 2)], typeof(GameObject));
         Instantiate(wep, pos2, transform.rotation);
+    }
+
+
+
+    void SpawnPlayer(string playerNumber)
+    {
+        GenerateRandomPosition();
+        float playerOneX;
+        float playerOneY;
+        float playerTwoX;
+        float playerTwoY;
+        if (playerNumber == "Two")
+        {
+            var playerOne = GameObject.Find("PlayerOne");
+            if (GameObject.Find("PlayerOne") == null)
+                playerOne = GameObject.Find("PlayerOne(Clone)");
+            playerOneX = playerOne.transform.position.x;
+            playerOneY = playerOne.transform.position.y;
+            while (true)
+            {
+                if (System.Math.Abs(x1 - playerOneX) < 10 || System.Math.Abs(y1 - playerOneY) < 10)
+                    GenerateRandomPosition();
+                else
+                    break;
+            }
+        }
+        else
+        {
+            var playerTwo = GameObject.Find("PlayerTwo");
+            if (GameObject.Find("PlayerOne") == null)
+                playerTwo = GameObject.Find("PlayerTwo(Clone)");
+            playerTwoX = playerTwo.transform.position.x;
+            playerTwoY = playerTwo.transform.position.y;
+            while (true)
+            {
+                if (System.Math.Abs(x1 - playerTwoX) < 10 || System.Math.Abs(y1 - playerTwoY) < 10)
+                    GenerateRandomPosition();
+                else
+                    break;
+            }
+        }
+
+        Vector2 pos = new Vector2(x1, y1);
+        GameObject playerRespawn = (GameObject)Resources.Load("Prefab/Players/Player" + playerNumber, typeof(GameObject));
+        Instantiate(playerRespawn, pos, transform.rotation);
+        respawnTimePlayer = playerRespawnTimer;
     }
 }
