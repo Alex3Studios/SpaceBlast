@@ -32,19 +32,28 @@ public class Timer : MonoBehaviour
 
     void SpawnRandomWeapon()
     {
-        int spawnLoc = Random.Range(0, 6);
-        int spawnLoc2 = Random.Range(0, 6);
+        float x1 = Random.Range(-16.5f, 27.5f);
+        float x2 = Random.Range(-16.5f, 27.5f);
+        float y1 = Random.Range(-18f, 8.5f);
+        float y2 = Random.Range(-18f, 8.5f);
+        Vector2 pos = new Vector2(x1, y1);
         while (true)
         {
-            if (spawnLoc == spawnLoc2)
+            if (System.Math.Abs(x1 - x2) < 8)
             {
-                spawnLoc2 = Random.Range(0, 6);
+                x2 = Random.Range(-16.5f, 27.5f);
+                continue;
+            }
+            else if (System.Math.Abs(y1 - y2) < 8)
+            {
+                y2 = Random.Range(-18f, 8.5f);
+                continue;
             }
             else
                 break;
         }
-        Vector2 pos = new Vector2(weaponPosX[spawnLoc], weaponPosY[spawnLoc]);
-        Vector2 pos2 = new Vector2(weaponPosX[spawnLoc2], weaponPosY[spawnLoc2]);
+
+        Vector2 pos2 = new Vector2(x2, y2);
 
         GameObject wep = (GameObject)Resources.Load("Prefab/Guns/" + weaponList[Random.Range(0, 2)], typeof(GameObject));
         Instantiate(wep, pos, transform.rotation);
