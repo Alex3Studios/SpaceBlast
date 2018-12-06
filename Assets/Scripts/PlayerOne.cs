@@ -11,6 +11,11 @@ public class PlayerOne : MonoBehaviour
     private Player player1;
     public GameObject deathEffect;
 
+    void Start()
+    {
+        ScoreText.PlayerOneHealthValue = health;
+    }
+
     void Awake()
     {
         player1 = ReInput.players.GetPlayer(0);
@@ -51,6 +56,7 @@ public class PlayerOne : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        ScoreText.PlayerOneHealthValue = health;
 
         if (health <= 0)
         {
