@@ -11,6 +11,13 @@ public class AsteroidScript : MonoBehaviour {
 	public GameObject asteroidMedium;
 	public GameObject asteroidSmall;
 
+	float xRight = 50;
+	float xLeft = -32;
+	float yTop = 15;
+	float yBottom = -30;
+
+	//float outsideScreenRadius = 4;
+
 	// Use this for initialization
 	void Start () {
 		//Add a random amount of torque and thrust to the asteroid
@@ -23,6 +30,24 @@ public class AsteroidScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Physics2D.IgnoreLayerCollision(9,10);
+
+		// Screen wrapping asteroids -> if they go out of screen they come back in on opposite side
+		Vector2 newPos = transform.position;
+
+		if(transform.position.y > yTop) {
+			newPos.y = yBottom;
+		}
+		else if(transform.position.y < yBottom) {
+			newPos.y = yTop;
+		}
+		else if(transform.position.x > xRight) {
+			newPos.x = xLeft;
+		}
+		else if(transform.position.x < xLeft) {
+			newPos.x = xRight;
+		}
+
+		transform.position = newPos;
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
