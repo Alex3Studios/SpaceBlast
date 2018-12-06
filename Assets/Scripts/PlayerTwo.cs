@@ -6,9 +6,9 @@ public class PlayerTwo : MonoBehaviour
 {
 
     public int health = 1000;
-    private Player player2;
     public Transform firePoint;
     public GameObject bulletPrefab;
+    private Player player2;
     public GameObject deathEffect;
 
     void Awake()
@@ -19,9 +19,6 @@ public class PlayerTwo : MonoBehaviour
     //Update Function
     void Update()
     {
-        //Move
-        //float Move = Input.GetAxis ("Horizontal");
-        //float MoveVertical = Input.GetAxis ("Vertical");
         float MoveX = player2.GetAxis("RotateX");
         float MoveY = player2.GetAxis("RotateY");
         float heading = Mathf.Atan2(MoveY, MoveX);

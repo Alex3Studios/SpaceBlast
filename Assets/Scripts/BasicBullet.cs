@@ -20,8 +20,6 @@ public class BasicBullet : MonoBehaviour
         PlayerOne playerOne = hitInfo.GetComponent<PlayerOne>();
         PlayerTwo playerTwo = hitInfo.GetComponent<PlayerTwo>();
 
-        Debug.Log(hitInfo.tag);
-
         if (playerTwo != null)
         {
             playerTwo.TakeDamage(damage);
