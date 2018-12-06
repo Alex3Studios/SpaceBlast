@@ -46,9 +46,9 @@ public class Timer : MonoBehaviour
         Vector2 pos = new Vector2(weaponPosX[spawnLoc], weaponPosY[spawnLoc]);
         Vector2 pos2 = new Vector2(weaponPosX[spawnLoc2], weaponPosY[spawnLoc2]);
 
-        GameObject wep = (GameObject)Resources.Load("Prefab/Guns/" + weaponList[Random.Range(0, 1)], typeof(GameObject));
+        GameObject wep = (GameObject)Resources.Load("Prefab/Guns/" + weaponList[Random.Range(0, 2)], typeof(GameObject));
         Instantiate(wep, pos, transform.rotation);
-        wep = (GameObject)Resources.Load("Prefab/Guns/" + weaponList[Random.Range(0, 1)], typeof(GameObject));
+        wep = (GameObject)Resources.Load("Prefab/Guns/" + weaponList[Random.Range(0, 2)], typeof(GameObject));
         Instantiate(wep, pos2, transform.rotation);
     }
 }

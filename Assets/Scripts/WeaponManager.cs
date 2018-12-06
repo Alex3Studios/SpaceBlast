@@ -18,7 +18,7 @@ public class WeaponManager : MonoBehaviour
     }
     public float Shoot()
     {
-        if(canshoot)
+        if(canshoot && activeWeapon != null)
         {
             canshoot = false;
             StartCoroutine("Cooldown");
