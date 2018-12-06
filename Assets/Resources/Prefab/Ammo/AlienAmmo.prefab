@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74a79eec3d33e9744a768c26511f16e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 200
+  damage: 50
   rb: {fileID: 50230128608461812}
   destroytimer: 2
 --- !u!212 &212857333722062262

@@ -6,7 +6,7 @@ public class Weapons : MonoBehaviour
 {
 
     public enum Modes
-    { Melee, Straight, Follow, Throw }
+    { Melee, Straight, Follow, Throw, Burst}
     public Sprite sprite;
     public GameObject projectile;
 

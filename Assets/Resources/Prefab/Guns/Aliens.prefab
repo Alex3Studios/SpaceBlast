@@ -113,7 +113,7 @@ MonoBehaviour:
   projectileSpeed: 20
   cooldown: 0.5
   recoil: 20
-  projectileMode: 1
+  projectileMode: 4
 --- !u!212 &212953949337444064
 SpriteRenderer:
   m_ObjectHideFlags: 1
