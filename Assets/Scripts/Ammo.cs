@@ -30,7 +30,7 @@ public class Ammo : MonoBehaviour
             playerOne.TakeDamage(damage);
             Destroy(gameObject);
         }
-        else if (playerOne == null && playerTwo == null)
+        else if (hitInfo.tag != "Guns")
         {
             Destroy(gameObject);
         }

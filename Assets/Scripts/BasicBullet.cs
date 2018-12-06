@@ -20,6 +20,8 @@ public class BasicBullet : MonoBehaviour
         PlayerOne playerOne = hitInfo.GetComponent<PlayerOne>();
         PlayerTwo playerTwo = hitInfo.GetComponent<PlayerTwo>();
 
+        Debug.Log(hitInfo.tag);
+
         if (playerTwo != null)
         {
             playerTwo.TakeDamage(damage);
@@ -30,7 +32,7 @@ public class BasicBullet : MonoBehaviour
             playerOne.TakeDamage(damage);
             Destroy(gameObject);
         }
-        else if (playerOne == null && playerTwo == null)
+        else if (hitInfo.tag != "Guns")
         {
             Destroy(gameObject);
         }
