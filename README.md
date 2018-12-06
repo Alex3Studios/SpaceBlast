@@ -34,7 +34,7 @@ Description of known problems at a given time.
 
 ## Attributes
 
-See [Attributes.](ATTRIBUTES.md)
+See [Assets.](ASSETS.md)
 
 ## Authors
 
