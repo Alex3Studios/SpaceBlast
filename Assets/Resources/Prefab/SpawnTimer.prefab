@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2bfac7a3520ce4419c0103d703b39a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialCountdown: 5
-  minSpawnTime: 20
-  maxSpawnTime: 45
+  respawnTimePlayer: 5
+  initialCountdownGun: 5
+  minSpawnTimeGun: 20
+  maxSpawnTimeGun: 45
