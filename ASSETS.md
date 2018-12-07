@@ -5,7 +5,7 @@ The assets used in the game Space Blast! and listed in the following sections ar
 
 ### Background
 
-[Ida Lahti](https://mymblemoments.wordpress.com/tag/video-games/)
+[Arnar Ingólfsson](https://www.linkedin.com/in/arnar-ing%C3%B3lfsson-84647252/)
 
 ### Character Model  
 
