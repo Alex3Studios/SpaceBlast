@@ -21,8 +21,22 @@ public class Crate : MonoBehaviour {
         PlayerOne playerOne = hitInfo.GetComponent<PlayerOne>();
         PlayerTwo playerTwo = hitInfo.GetComponent<PlayerTwo>();
 
-        if (playerTwo != null || playerOne != null)
+        if (playerTwo != null)
         {
+            GameObject weaponSlot = playerTwo.transform.GetChild(1).gameObject;
+            WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
+            activateWeapon.activeWeapon = WeaponHere;
+            activateWeapon.initialize();
+
+            Destroy(gameObject);
+        }
+        if (playerOne != null)
+        {
+            GameObject weaponSlot = playerOne.transform.GetChild(1).gameObject;
+            WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
+            activateWeapon.activeWeapon = WeaponHere;
+            activateWeapon.initialize();
+
             Destroy(gameObject);
         }
     }

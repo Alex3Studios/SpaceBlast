@@ -39,7 +39,7 @@ public class PlayerOne : MonoBehaviour
         }
         if (player1.GetButtonDown("PowerUp"))
         {
-            GameObject weaponmanagerObject = GameObject.Find("PlayerOneWeaponSlot");
+            GameObject weaponmanagerObject = transform.GetChild(1).gameObject;
             WeaponManager wm = weaponmanagerObject.GetComponent<WeaponManager>();
             float recoil = wm.Shoot();
             Recoil(recoil);
