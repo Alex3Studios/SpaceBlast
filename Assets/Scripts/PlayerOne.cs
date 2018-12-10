@@ -35,7 +35,7 @@ public class PlayerOne : MonoBehaviour
         if (player1.GetButtonDown("Shoot"))
         {
             Shoot();
-            Recoil(7);
+            Recoil(15);
         }
         if (player1.GetButtonDown("PowerUp"))
         {

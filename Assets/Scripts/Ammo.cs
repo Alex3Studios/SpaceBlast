@@ -7,7 +7,7 @@ public class Ammo : MonoBehaviour
 
     public int damage;
     public Rigidbody2D rb;
-    public int destroytimer;
+    public float destroytimer;
 
     // Use this for initialization
     void Start()
