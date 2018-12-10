@@ -33,7 +33,7 @@ public class ScoreText : MonoBehaviour
             PlayerTwoScore.text = "Score: " + PlayerTwoScoreValue;
         else if (gameObject.name == "HealthPlayerOne")
             PlayerOneHealth.text = "Health: " + PlayerOneHealthValue;
-        else
+        else if (gameObject.name == "HealthPlayerTwo")
             PlayerTwoHealth.text = "Health: " + PlayerTwoHealthValue;
 
     }

@@ -9,6 +9,11 @@ TagManager:
   - Asteroid
   - Guns
   - Basic Bullet
+  - PlayerOne
+  - PlayerTwo
+  - PlayerOnePowerUp
+  - PlayerTwoPowerUp
+  - nopowerup
   layers:
   - Default
   - TransparentFX
@@ -57,4 +62,7 @@ TagManager:
     locked: 0
   - name: Guns
     uniqueID: 3149217723
+    locked: 0
+  - name: Status
+    uniqueID: 2027619835
     locked: 0

@@ -24,6 +24,8 @@ public class Crate : MonoBehaviour {
         if (playerTwo != null)
         {
             GameObject weaponSlot = playerTwo.transform.GetChild(1).gameObject;
+            GameObject powerupdisplay = GameObject.FindGameObjectWithTag("PlayerTwoPowerUp");
+            powerupdisplay.GetComponent<SpriteRenderer>().sprite = WeaponHere.GetComponent<SpriteRenderer>().sprite;
             WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
             activateWeapon.activeWeapon = WeaponHere;
             activateWeapon.initialize();
@@ -33,6 +35,8 @@ public class Crate : MonoBehaviour {
         if (playerOne != null)
         {
             GameObject weaponSlot = playerOne.transform.GetChild(1).gameObject;
+            GameObject powerupdisplay = GameObject.FindGameObjectWithTag("PlayerOnePowerUp");
+            powerupdisplay.GetComponent<SpriteRenderer>().sprite = WeaponHere.GetComponent<SpriteRenderer>().sprite;
             WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
             activateWeapon.activeWeapon = WeaponHere;
             activateWeapon.initialize();

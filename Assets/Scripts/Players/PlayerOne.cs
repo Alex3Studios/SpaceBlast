@@ -78,6 +78,9 @@ public class PlayerOne : MonoBehaviour
             scoreCheck = false;
             Destroy(gameObject);
             ScoreText.PlayerTwoScoreValue += 1;
+            GameObject powerup = GameObject.FindGameObjectWithTag("PlayerOnePowerUp");
+            powerup.GetComponent<SpriteRenderer>().sprite = Resources.Load("Weapons/nopowerup") as Sprite;
+            Debug.Log(Resources.Load("Weapons/nopowerup"));
         }
     }
 
