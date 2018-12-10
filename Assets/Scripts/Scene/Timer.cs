@@ -5,7 +5,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
 
-    string[] weaponList = { "Aliens", "RocketLauncher" };       //Fix later for final handin, this is just a temp fix
+    public GameObject[] weaponList;
     private GameObject crate;
     float x1, x2, y1, y2;
     public float respawnTimePlayer;
@@ -63,10 +63,10 @@ public class Timer : MonoBehaviour
         Vector2 pos = new Vector2(x1, y1);
         Vector2 pos2 = new Vector2(x2, y2);
 
-        GameObject wep = (GameObject)Resources.Load("Prefab/Guns/" + weaponList[Random.Range(0, 2)], typeof(GameObject));
+        GameObject wep = weaponList[Random.Range(0, weaponList.Length)];
         Instantiate(crate, pos, transform.rotation);
         Instantiate(wep, pos, transform.rotation);
-        wep = (GameObject)Resources.Load("Prefab/Guns/" + weaponList[Random.Range(0, 2)], typeof(GameObject));
+        wep = weaponList[Random.Range(0, weaponList.Length)];
         Instantiate(crate, pos2, transform.rotation);
         Instantiate(wep, pos2, transform.rotation);
     }

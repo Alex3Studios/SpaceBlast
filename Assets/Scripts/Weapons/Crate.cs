@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Crate : MonoBehaviour {
 
+    public GameObject WeaponHere;
+
 	// Use this for initialization
 	void Start () {
 		
