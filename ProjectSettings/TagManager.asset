@@ -6,6 +6,9 @@ TagManager:
   tags:
   - bullet
   - Explosion
+  - Asteroid
+  - Guns
+  - Basic Bullet
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - Border
   - Player
   - Guns
-  - 
+  - Basic Bullet
   - 
   - 
   - 

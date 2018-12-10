@@ -55,6 +55,6 @@ MonoBehaviour:
   center: {x: 5.5, y: -5.5}
   size: {x: 30, y: 30}
   spawnWait: 0
-  spawnMaxWait: 15
+  spawnMaxWait: 10
   spawnMinWait: 1
   startWait: 3
