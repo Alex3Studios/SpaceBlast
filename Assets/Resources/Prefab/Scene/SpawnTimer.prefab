@@ -54,6 +54,7 @@ MonoBehaviour:
   weaponList:
   - {fileID: 1436978397492686, guid: d4dc894dade028d40bf451672afad91f, type: 2}
   - {fileID: 1335748679980986, guid: f40770828f508eb48990fdebc249e67a, type: 2}
+  crate: {fileID: 1210632651308232, guid: 4c3a270fceb435f448b63748859926d3, type: 2}
   respawnTimePlayer: 5
   initialCountdownGun: 5
   minSpawnTimeGun: 20
