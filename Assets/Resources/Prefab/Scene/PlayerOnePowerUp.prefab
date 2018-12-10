@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4745386951294960}
   - component: {fileID: 212490347654831082}
+  - component: {fileID: 114586749364067896}
   m_Layer: 0
   m_Name: PlayerOnePowerUp
   m_TagString: PlayerOnePowerUp
@@ -40,6 +41,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114586749364067896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414932897720198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637a8d54ba02474eb96771f92487fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultsprite: {fileID: 21300000, guid: 1f3e87dd6e9ae6b4b91e62da041fefe9, type: 3}
 --- !u!212 &212490347654831082
 SpriteRenderer:
   m_ObjectHideFlags: 1
