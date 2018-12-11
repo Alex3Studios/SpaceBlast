@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Crate : MonoBehaviour {
+public class Crate : MonoBehaviour
+{
 
     public GameObject WeaponHere;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Use this for initialization
+    void Start()
+    {
 
-	void OnTriggerEnter2D(Collider2D hitInfo)
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    void OnTriggerEnter2D(Collider2D hitInfo)
     {
         PlayerOne playerOne = hitInfo.GetComponent<PlayerOne>();
         PlayerTwo playerTwo = hitInfo.GetComponent<PlayerTwo>();
@@ -39,6 +42,7 @@ public class Crate : MonoBehaviour {
             powerupdisplay.GetComponent<SpriteRenderer>().sprite = WeaponHere.GetComponent<SpriteRenderer>().sprite;
             WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
             activateWeapon.activeWeapon = WeaponHere;
+            playerOne.specialAmmo = 10;
             activateWeapon.initialize();
 
             Destroy(gameObject);
