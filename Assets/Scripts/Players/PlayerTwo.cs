@@ -1,20 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Rewired;
+using UnityEngine.UI;
 
 public class PlayerTwo : MonoBehaviour
 {
 
     public int health = 1000;
     public int specialAmmo;
+    public int maxAmmoCapacity;
     public Transform firePoint;
     public GameObject bulletPrefab;
     private Player player2;
     bool scoreCheck;
     public GameObject deathEffect;
-
+    Text PlayerTwoAmmo;
     void Start()
     {
+        PlayerTwoAmmo = GetComponent<Text>();
         ScoreText.PlayerTwoHealthValue = health;
         scoreCheck = true;
     }
@@ -26,6 +29,7 @@ public class PlayerTwo : MonoBehaviour
     //Update Function
     void Update()
     {
+        GameObject ammoTextPlayerTwo = GameObject.FindGameObjectWithTag("PlayerTwoAmmo");
         float MoveX = player2.GetAxis("RotateX");
         float MoveY = player2.GetAxis("RotateY");
         float heading = Mathf.Atan2(MoveY, MoveX);
@@ -45,24 +49,28 @@ public class PlayerTwo : MonoBehaviour
                 float recoil = wm.Shoot();
                 Recoil(recoil);
                 if (recoil != 0)
+                {
                     specialAmmo -= 1;
+                    ammoTextPlayerTwo.GetComponent<UnityEngine.UI.Text>().text = specialAmmo + "/" + maxAmmoCapacity;
+                }
                 if (specialAmmo < 1)
-                    RemoveWeapon(wm);
+                    RemoveWeapon(ammoTextPlayerTwo, wm);
             }
             else if (wm.activeWeapon != null)
             {
-                RemoveWeapon(wm);
+                RemoveWeapon(ammoTextPlayerTwo, wm);
             }
 
         }
     }
 
-    void RemoveWeapon(WeaponManager wm)
+    void RemoveWeapon(GameObject ammoTextPlayerOne, WeaponManager wm)
     {
         GameObject powerup = GameObject.FindGameObjectWithTag("PlayerOnePowerUp");
         powerup.GetComponent<SpriteRenderer>().sprite = powerup.GetComponent<powerup>().defaultsprite;
         wm.activeWeapon = null;
         wm.GetComponent<SpriteRenderer>().sprite = null;
+        ammoTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = "  0" + "/" + "0";
     }
 
     void Shoot()

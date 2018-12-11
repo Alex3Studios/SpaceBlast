@@ -26,24 +26,32 @@ public class Crate : MonoBehaviour
 
         if (playerTwo != null)
         {
+            GameObject ammoTextPlayerTwo = GameObject.FindGameObjectWithTag("PlayerTwoAmmo");
             GameObject weaponSlot = playerTwo.transform.GetChild(1).gameObject;
             GameObject powerupdisplay = GameObject.FindGameObjectWithTag("PlayerTwoPowerUp");
             powerupdisplay.GetComponent<SpriteRenderer>().sprite = WeaponHere.GetComponent<SpriteRenderer>().sprite;
             WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
             activateWeapon.activeWeapon = WeaponHere;
-            playerTwo.specialAmmo = WeaponHere.GetComponent<Weapons>().ammoCapacity;
+            var weaponAmmoCapacity = WeaponHere.GetComponent<Weapons>().ammoCapacity; ;
+            playerTwo.specialAmmo = weaponAmmoCapacity;
+            playerTwo.maxAmmoCapacity = weaponAmmoCapacity;
+            ammoTextPlayerTwo.GetComponent<UnityEngine.UI.Text>().text = playerTwo.specialAmmo + "/" + weaponAmmoCapacity;
             activateWeapon.initialize();
 
             Destroy(gameObject);
         }
         if (playerOne != null)
         {
+            GameObject ammoTextPlayerOne = GameObject.FindGameObjectWithTag("PlayerOneAmmo");
             GameObject weaponSlot = playerOne.transform.GetChild(1).gameObject;
             GameObject powerupdisplay = GameObject.FindGameObjectWithTag("PlayerOnePowerUp");
             powerupdisplay.GetComponent<SpriteRenderer>().sprite = WeaponHere.GetComponent<SpriteRenderer>().sprite;
             WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
             activateWeapon.activeWeapon = WeaponHere;
-            playerOne.specialAmmo = WeaponHere.GetComponent<Weapons>().ammoCapacity;
+            var weaponAmmoCapacity = WeaponHere.GetComponent<Weapons>().ammoCapacity; ;
+            playerOne.specialAmmo = weaponAmmoCapacity;
+            playerOne.maxAmmoCapacity = weaponAmmoCapacity;
+            ammoTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = playerOne.specialAmmo + "/" + weaponAmmoCapacity;
             activateWeapon.initialize();
 
             Destroy(gameObject);
