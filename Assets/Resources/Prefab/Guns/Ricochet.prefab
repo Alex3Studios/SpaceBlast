@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4217377620422978}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FirePoint
   m_TagString: bullet
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 212786354049589754}
   - component: {fileID: 114474728727034238}
   - component: {fileID: 61556370799247338}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Ricochet
   m_TagString: Guns
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1524888782144842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.10583794, y: 16.56271, z: 0}
+  m_LocalPosition: {x: -3.962367, y: 15.945519, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4217377620422978}
@@ -110,7 +110,7 @@ MonoBehaviour:
   sprite: {fileID: 21300006, guid: 0b67a93211898be4e9a52a9636730abd, type: 3}
   projectile: {fileID: 1614495963519878, guid: a0bdd14f0b6b9bf478c8daddfab56b70, type: 2}
   weapon: {fileID: 1524888782144842}
-  ammoCapacity: 30
+  ammoCapacity: 12
   projectileSpeed: 20
   cooldown: 0.5
   recoil: 20
