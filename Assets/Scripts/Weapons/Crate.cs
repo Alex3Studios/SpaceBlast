@@ -6,6 +6,7 @@ public class Crate : MonoBehaviour
 {
 
     public GameObject WeaponHere;
+    public GameObject soundPrefab;
 
     // Use this for initialization
     void Start()
@@ -37,7 +38,7 @@ public class Crate : MonoBehaviour
             playerTwo.maxAmmoCapacity = weaponAmmoCapacity;
             ammoTextPlayerTwo.GetComponent<UnityEngine.UI.Text>().text = playerTwo.specialAmmo + "/" + weaponAmmoCapacity;
             activateWeapon.initialize();
-
+            Instantiate(soundPrefab, transform.position, transform.rotation);
             Destroy(gameObject);
         }
         if (playerOne != null)
@@ -53,7 +54,7 @@ public class Crate : MonoBehaviour
             playerOne.maxAmmoCapacity = weaponAmmoCapacity;
             ammoTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = playerOne.specialAmmo + "/" + weaponAmmoCapacity;
             activateWeapon.initialize();
-
+            Instantiate(soundPrefab, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

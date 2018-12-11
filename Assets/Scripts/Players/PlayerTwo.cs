@@ -14,10 +14,8 @@ public class PlayerTwo : MonoBehaviour
     private Player player2;
     bool scoreCheck;
     public GameObject deathEffect;
-    Text PlayerTwoAmmo;
     void Start()
     {
-        PlayerTwoAmmo = GetComponent<Text>();
         ScoreText.PlayerTwoHealthValue = health;
         scoreCheck = true;
     }
