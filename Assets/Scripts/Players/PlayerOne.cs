@@ -107,6 +107,8 @@ public class PlayerOne : MonoBehaviour
             ScoreText.PlayerTwoScoreValue += 1;
             GameObject powerup = GameObject.FindGameObjectWithTag("PlayerOnePowerUp");
             powerup.GetComponent<SpriteRenderer>().sprite = powerup.GetComponent<powerup>().defaultsprite;
+            GameObject ammoTextPlayerOne = GameObject.FindGameObjectWithTag("PlayerOneAmmo");
+            ammoTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = "  0" + "/" + "0";
         }
     }
 

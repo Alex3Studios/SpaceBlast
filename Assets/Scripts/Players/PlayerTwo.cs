@@ -64,13 +64,13 @@ public class PlayerTwo : MonoBehaviour
         }
     }
 
-    void RemoveWeapon(GameObject ammoTextPlayerOne, WeaponManager wm)
+    void RemoveWeapon(GameObject ammoTextPlayerTwo, WeaponManager wm)
     {
-        GameObject powerup = GameObject.FindGameObjectWithTag("PlayerOnePowerUp");
+        GameObject powerup = GameObject.FindGameObjectWithTag("PlayerTwoPowerUp");
         powerup.GetComponent<SpriteRenderer>().sprite = powerup.GetComponent<powerup>().defaultsprite;
         wm.activeWeapon = null;
         wm.GetComponent<SpriteRenderer>().sprite = null;
-        ammoTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = "  0" + "/" + "0";
+        ammoTextPlayerTwo.GetComponent<UnityEngine.UI.Text>().text = "  0" + "/" + "0";
     }
 
     void Shoot()
@@ -109,6 +109,8 @@ public class PlayerTwo : MonoBehaviour
             ScoreText.PlayerOneScoreValue += 1;
             GameObject powerup = GameObject.FindGameObjectWithTag("PlayerTwoPowerUp");
             powerup.GetComponent<SpriteRenderer>().sprite = powerup.GetComponent<powerup>().defaultsprite;
+            GameObject ammoTextPlayerTwo = GameObject.FindGameObjectWithTag("PlayerTwoAmmo");
+            ammoTextPlayerTwo.GetComponent<UnityEngine.UI.Text>().text = "  0" + "/" + "0";
         }
     }
 }
