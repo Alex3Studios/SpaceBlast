@@ -84,7 +84,6 @@ public class AsteroidScript : MonoBehaviour
         {
             if (asteroidSize == 1)
             {
-                // Spawn two small asteroids
                 Destroy(gameObject);
             }
         }
