@@ -12,6 +12,7 @@ public class Weapons : MonoBehaviour
 
     public GameObject weapon;
     public int ammoCapacity;
+    public static int ammo;
     public float projectileSpeed;
     public float cooldown;
     public float recoil;
@@ -21,6 +22,6 @@ public class Weapons : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        ammo = ammoCapacity;
     }
 }

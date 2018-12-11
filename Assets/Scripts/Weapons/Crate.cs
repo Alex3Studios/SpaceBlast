@@ -31,7 +31,7 @@ public class Crate : MonoBehaviour
             powerupdisplay.GetComponent<SpriteRenderer>().sprite = WeaponHere.GetComponent<SpriteRenderer>().sprite;
             WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
             activateWeapon.activeWeapon = WeaponHere;
-            playerTwo.specialAmmo = 10;
+            playerTwo.specialAmmo = WeaponHere.GetComponent<Weapons>().ammoCapacity;
             activateWeapon.initialize();
 
             Destroy(gameObject);
@@ -43,7 +43,7 @@ public class Crate : MonoBehaviour
             powerupdisplay.GetComponent<SpriteRenderer>().sprite = WeaponHere.GetComponent<SpriteRenderer>().sprite;
             WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
             activateWeapon.activeWeapon = WeaponHere;
-            playerOne.specialAmmo = 10;
+            playerOne.specialAmmo = WeaponHere.GetComponent<Weapons>().ammoCapacity;
             activateWeapon.initialize();
 
             Destroy(gameObject);
