@@ -55,7 +55,6 @@ public class PlayerOne : MonoBehaviour
             {
                 RemoveWeapon(wm);
             }
-
         }
     }
 

@@ -110,6 +110,7 @@ MonoBehaviour:
   sprite: {fileID: 21300026, guid: 0b67a93211898be4e9a52a9636730abd, type: 3}
   projectile: {fileID: 1190210623479750, guid: 91bc29713f5ebd3499fcea255010c2ad, type: 2}
   weapon: {fileID: 1335748679980986}
+  ammoCapacity: 8
   projectileSpeed: 40
   cooldown: 2
   recoil: 50

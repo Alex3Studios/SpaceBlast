@@ -6,6 +6,7 @@ public class PlayerTwo : MonoBehaviour
 {
 
     public int health = 1000;
+    public int specialAmmo;
     public Transform firePoint;
     public GameObject bulletPrefab;
     private Player player2;
