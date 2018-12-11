@@ -31,6 +31,7 @@ public class Crate : MonoBehaviour
             powerupdisplay.GetComponent<SpriteRenderer>().sprite = WeaponHere.GetComponent<SpriteRenderer>().sprite;
             WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
             activateWeapon.activeWeapon = WeaponHere;
+            playerTwo.specialAmmo = 10;
             activateWeapon.initialize();
 
             Destroy(gameObject);

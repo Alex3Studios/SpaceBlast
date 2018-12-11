@@ -39,10 +39,29 @@ public class PlayerTwo : MonoBehaviour
         {
             GameObject weaponmanagerObject = transform.GetChild(1).gameObject;
             WeaponManager wm = weaponmanagerObject.GetComponent<WeaponManager>();
-            float recoil = wm.Shoot();
-            Recoil(recoil);
+            if (specialAmmo > 0)
+            {
+                float recoil = wm.Shoot();
+                Recoil(recoil);
+                if (recoil != 0)
+                    specialAmmo -= 1;
+                if (specialAmmo < 1)
+                    RemoveWeapon(wm);
+            }
+            else if (wm.activeWeapon != null)
+            {
+                RemoveWeapon(wm);
+            }
 
         }
+    }
+
+    void RemoveWeapon(WeaponManager wm)
+    {
+        GameObject powerup = GameObject.FindGameObjectWithTag("PlayerOnePowerUp");
+        powerup.GetComponent<SpriteRenderer>().sprite = powerup.GetComponent<powerup>().defaultsprite;
+        wm.activeWeapon = null;
+        wm.GetComponent<SpriteRenderer>().sprite = null;
     }
 
     void Shoot()
