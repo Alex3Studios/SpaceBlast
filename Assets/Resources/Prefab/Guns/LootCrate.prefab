@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212131021116042482}
   - component: {fileID: 114847819296442454}
   - component: {fileID: 61601614153064022}
-  m_Layer: 15
+  m_Layer: 12
   m_Name: LootCrate
   m_TagString: Crate
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4284352339199250}
   - component: {fileID: 212280752132427412}
-  m_Layer: 15
+  m_Layer: 12
   m_Name: TheWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
