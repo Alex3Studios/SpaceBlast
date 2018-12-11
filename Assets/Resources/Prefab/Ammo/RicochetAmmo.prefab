@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 58351863258272816}
   m_Layer: 14
   m_Name: RicochetAmmo
-  m_TagString: Basic Bullet
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
