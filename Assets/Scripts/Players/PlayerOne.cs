@@ -1,20 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Rewired;
-
+using UnityEngine.UI;
 public class PlayerOne : MonoBehaviour
 {
 
     public int health = 1000;
     public int specialAmmo;
+    public int maxAmmoCapacity;
     public Transform firePoint;
     public GameObject bulletPrefab;
     bool scoreCheck;
     private Player player1;
     public GameObject deathEffect;
+    Text PlayerOneAmmo;
 
     void Start()
     {
+        PlayerOneAmmo = GetComponent<Text>();
         ScoreText.PlayerOneHealthValue = health;
         scoreCheck = true;
     }
@@ -27,6 +30,7 @@ public class PlayerOne : MonoBehaviour
     //Update Function
     void Update()
     {
+        GameObject ammoTextPlayerOne = GameObject.FindGameObjectWithTag("PlayerOneAmmo");
         float MoveX = player1.GetAxis("RotateX");
         float MoveY = player1.GetAxis("RotateY");
         float heading = Mathf.Atan2(MoveY, MoveX);
@@ -47,23 +51,27 @@ public class PlayerOne : MonoBehaviour
                 float recoil = wm.Shoot();
                 Recoil(recoil);
                 if (recoil != 0)
+                {
                     specialAmmo -= 1;
+                    ammoTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = specialAmmo + "/" + maxAmmoCapacity;
+                }
                 if (specialAmmo < 1)
-                    RemoveWeapon(wm);
+                    RemoveWeapon(ammoTextPlayerOne, wm);
             }
             else if (wm.activeWeapon != null)
             {
-                RemoveWeapon(wm);
+                RemoveWeapon(ammoTextPlayerOne, wm);
             }
         }
     }
 
-    void RemoveWeapon(WeaponManager wm)
+    void RemoveWeapon(GameObject ammoTextPlayerOne, WeaponManager wm)
     {
         GameObject powerup = GameObject.FindGameObjectWithTag("PlayerOnePowerUp");
         powerup.GetComponent<SpriteRenderer>().sprite = powerup.GetComponent<powerup>().defaultsprite;
         wm.activeWeapon = null;
         wm.GetComponent<SpriteRenderer>().sprite = null;
+        ammoTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = "  0" + "/" + "0";
     }
     void Shoot()
     {
@@ -99,6 +107,8 @@ public class PlayerOne : MonoBehaviour
             ScoreText.PlayerTwoScoreValue += 1;
             GameObject powerup = GameObject.FindGameObjectWithTag("PlayerOnePowerUp");
             powerup.GetComponent<SpriteRenderer>().sprite = powerup.GetComponent<powerup>().defaultsprite;
+            GameObject ammoTextPlayerOne = GameObject.FindGameObjectWithTag("PlayerOneAmmo");
+            ammoTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = "  0" + "/" + "0";
         }
     }
 

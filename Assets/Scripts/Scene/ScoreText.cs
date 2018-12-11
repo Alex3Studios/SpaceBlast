@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ScoreText : MonoBehaviour
 {
-
     public static int PlayerOneScoreValue = 0;
     public static int PlayerOneHealthValue = 1000;
     public static int PlayerTwoScoreValue = 0;
@@ -18,6 +17,7 @@ public class ScoreText : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        PlayerOneScore = GetComponent<Text>();
         PlayerOneScore = GetComponent<Text>();
         PlayerOneHealth = GetComponent<Text>();
         PlayerTwoScore = GetComponent<Text>();
@@ -35,6 +35,5 @@ public class ScoreText : MonoBehaviour
             PlayerOneHealth.text = "Health: " + PlayerOneHealthValue;
         else if (gameObject.name == "HealthPlayerTwo")
             PlayerTwoHealth.text = "Health: " + PlayerTwoHealthValue;
-
     }
 }
