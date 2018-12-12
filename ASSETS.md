@@ -21,3 +21,8 @@ The assets used in the game Space Blast! and listed in the following sections ar
 ### Crates
 
 * Weapon Crate - [Cpt_Flash](https://opengameart.org/content/2d-wooden-box)
+
+### Fonts
+
+* Arial
+* [BeatStreet](https://www.1001freefonts.com/beatstreet.font)
