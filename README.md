@@ -7,12 +7,12 @@ Space, the final frontier. Two ships of opposing factions meet when one travelli
 
 ### Prerequisites
 
-To be able to play the game access to a computer with the game installed as well as two PS4 controllers.
+To be able to play the game you need access to a build of the game as well as two controllers.
 
 
 ### Running the game
 
-To run the game ...
+Click on the build and run it.
 
 #### Example of gameplay
 

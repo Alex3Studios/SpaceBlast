@@ -16,13 +16,8 @@ The assets used in the game Space Blast! and listed in the following sections ar
 ### Weapons
 * Pistol - [DieMango](https://opengameart.org/content/gun-sprites-3)
 * Bazooka - [DieMango](https://opengameart.org/content/gun-sprites-3)
-* Bow +  arrow - 
-* Shotgun - 
 * Rifle - [DieMango](https://opengameart.org/content/gun-sprites-3)
-* Rocket boots - 
-* Grappling hook - 
 
 ### Crates
 
 * Weapon Crate - [Cpt_Flash](https://opengameart.org/content/2d-wooden-box)
-* Gadget Crate - 
