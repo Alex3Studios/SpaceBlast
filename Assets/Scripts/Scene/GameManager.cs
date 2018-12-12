@@ -10,11 +10,17 @@ public class GameManager : MonoBehaviour {
 		if(gameHasEnded == false) {
 			gameHasEnded = true;
 			Debug.Log("GAME OVER");
-			Restart();
+			GameOver();
 		}
 	}
 
-	void Restart() {
+	// Can be called to restart current scene
+	public void RestartCurrentScene() {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+	}
+
+	// Called when game over 
+	public void GameOver() {
+		SceneManager.LoadScene("GameOverMenu");
 	}
 }
