@@ -12,10 +12,10 @@ public class AsteroidScript : MonoBehaviour
     public GameObject asteroidMedium;
     public GameObject asteroidSmall;
 
-    float xRight = 50;
-    float xLeft = -32;
-    float yTop = 15;
-    float yBottom = -30;
+    public float xRight = 50;
+    public float xLeft = -32;
+    public float yTop = 15;
+    public float yBottom = -30;
 
     //float outsideScreenRadius = 4;
 
