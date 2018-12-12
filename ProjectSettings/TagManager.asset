@@ -16,6 +16,7 @@ TagManager:
   - nopowerup
   - PlayerOneAmmo
   - PlayerTwoAmmo
+  - Crate
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - Guns
   - Basic Bullet
   - ricochet
-  - 
+  - Crate
   - 
   - 
   - 

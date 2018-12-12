@@ -23,10 +23,10 @@ GameObject:
   - component: {fileID: 50932431276541646}
   - component: {fileID: 61158286463010172}
   - component: {fileID: 82533721667756982}
-  - component: {fileID: 114498922595357938}
+  - component: {fileID: 114412151185430136}
   m_Layer: 0
   m_Name: Explosion
-  m_TagString: Explosion
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1992386537343040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.284573, y: 12.874025, z: 0}
+  m_LocalPosition: {x: 12.81488, y: 20.142708, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -184,7 +184,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114498922595357938
+--- !u!114 &114412151185430136
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,10 +192,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1992386537343040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb9083793d9224e4695b31ec7ff175e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 74a79eec3d33e9744a768c26511f16e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 50
+  rb: {fileID: 50932431276541646}
+  destroytimer: 1
 --- !u!212 &212207998774051172
 SpriteRenderer:
   m_ObjectHideFlags: 1

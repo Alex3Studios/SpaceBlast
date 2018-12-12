@@ -60,7 +60,7 @@ public class AsteroidScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         // Check if it's a bullet
-        if (other.CompareTag("bullet"))
+        if (other.CompareTag("bullet") && other.gameObject.layer != 14)
         {
             // Destroy the bullet
             Destroy(other.gameObject);

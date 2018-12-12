@@ -87,7 +87,6 @@ public class PlayerOne : MonoBehaviour
         if (health <= 0)
         {
             ScoreText.PlayerOneHealthValue = 0;
-            Debug.Log("Dead");
             Die();
         }
         else

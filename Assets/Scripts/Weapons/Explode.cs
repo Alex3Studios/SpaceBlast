@@ -14,7 +14,7 @@ public class Explode : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.tag != "Guns")
+        if (hitInfo.tag != "Crate")
         {
             Instantiate(explosion, transform.position, transform.rotation);
         }
