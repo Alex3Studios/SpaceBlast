@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 212131021116042482}
   - component: {fileID: 114847819296442454}
   - component: {fileID: 61601614153064022}
-  m_Layer: 12
+  - component: {fileID: 61131338005794114}
+  m_Layer: 15
   m_Name: LootCrate
   m_TagString: Crate
   m_Icon: {fileID: 0}
@@ -38,7 +39,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4284352339199250}
   - component: {fileID: 212280752132427412}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: TheWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,13 +66,38 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1210632651308232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.387332, y: 6.8497486, z: 0}
+  m_LocalPosition: {x: -11.14, y: 15.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4284352339199250}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61131338005794114
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1210632651308232}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.7066667, y: 1.7066667}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7066667, y: 1.7066667}
+  m_EdgeRadius: 0
 --- !u!61 &61601614153064022
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -108,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3087c360973aaa24ab3d77451e743704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponHere: {fileID: 1335748679980986, guid: f40770828f508eb48990fdebc249e67a, type: 2}
+  WeaponHere: {fileID: 1524888782144842, guid: 02dd12bf96c15bf41ac9575ea90adae4, type: 2}
   soundPrefab: {fileID: 1800037617758242, guid: 26f3a3e2313857646adab4e9cb08c582,
     type: 2}
 --- !u!212 &212131021116042482
@@ -192,7 +218,7 @@ SpriteRenderer:
   m_SortingLayerID: -1145749573
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300026, guid: 0b67a93211898be4e9a52a9636730abd, type: 3}
+  m_Sprite: {fileID: 21300006, guid: 0b67a93211898be4e9a52a9636730abd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

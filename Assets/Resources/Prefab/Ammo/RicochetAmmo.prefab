@@ -20,10 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4963345772719556}
   - component: {fileID: 212462506961317232}
-  - component: {fileID: 61370521596765346}
   - component: {fileID: 50492434552004894}
-  - component: {fileID: 114148472575550594}
   - component: {fileID: 58351863258272816}
+  - component: {fileID: 114101858663251972}
   m_Layer: 14
   m_Name: RicochetAmmo
   m_TagString: bullet
@@ -38,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1614495963519878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2860382, y: 15.885691, z: 0}
+  m_LocalPosition: {x: 6.0343084, y: 17.199963, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,32 +78,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.225
---- !u!61 &61370521596765346
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1614495963519878}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0054790974, y: 0.0109529495}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.45, y: 0.3}
-    newSize: {x: 0.4, y: 0.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.3452096, y: 0.30285072}
-  m_EdgeRadius: 0
---- !u!114 &114148472575550594
+--- !u!114 &114101858663251972
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,10 +86,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1614495963519878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e42f1a35e7dd26d44bf096ce9cdc6017, type: 3}
+  m_Script: {fileID: 11500000, guid: 74a79eec3d33e9744a768c26511f16e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 75
+  damage: 100
   rb: {fileID: 50492434552004894}
   destroytimer: 4
 --- !u!212 &212462506961317232

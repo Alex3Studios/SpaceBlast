@@ -26,6 +26,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1179313217706270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4891694139239482}
+  - component: {fileID: 61088055392940606}
+  - component: {fileID: 114192883338958148}
+  m_Layer: 0
+  m_Name: HitBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1541020304615580
 GameObject:
   m_ObjectHideFlags: 0
@@ -53,7 +70,6 @@ GameObject:
   - component: {fileID: 4766583665885942}
   - component: {fileID: 212195014691944594}
   - component: {fileID: 61410755544098440}
-  - component: {fileID: 61936531428975372}
   - component: {fileID: 50965901703263060}
   - component: {fileID: 114843232899802638}
   m_Layer: 0
@@ -88,6 +104,7 @@ Transform:
   m_Children:
   - {fileID: 4817361297079866}
   - {fileID: 4257426164823276}
+  - {fileID: 4891694139239482}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -98,11 +115,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1168336298219086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.967, y: 0.003, z: 0}
+  m_LocalPosition: {x: 1.2, y: 0.003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4766583665885942}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4891694139239482
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1179313217706270}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4766583665885942}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50965901703263060
 Rigidbody2D:
@@ -124,6 +154,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!61 &61088055392940606
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1179313217706270}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.082099915, y: -0.013676643}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3735294, y: 2.396213}
+  m_EdgeRadius: 0
 --- !u!61 &61410755544098440
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -147,33 +202,19 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0669613, y: 2.0589447}
+  m_Size: {x: 1.089655, y: 2.058591}
   m_EdgeRadius: 0
---- !u!61 &61936531428975372
-BoxCollider2D:
+--- !u!114 &114192883338958148
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1910438349057374}
+  m_GameObject: {fileID: 1179313217706270}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.021872044, y: -0.019504309}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 2.2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3926115, y: 2.2761436}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bfd9b4d5e41d4743ac272523a93c3db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114276499022337006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -199,6 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1000
   specialAmmo: 0
+  maxAmmoCapacity: 0
   firePoint: {fileID: 4817361297079866}
   bulletPrefab: {fileID: 1000012472556178, guid: df4449626a8841b4895c6fe6c0a9d466,
     type: 2}

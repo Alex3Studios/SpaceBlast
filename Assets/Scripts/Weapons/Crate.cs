@@ -22,40 +22,37 @@ public class Crate : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        PlayerOne playerOne = hitInfo.GetComponent<PlayerOne>();
-        PlayerTwo playerTwo = hitInfo.GetComponent<PlayerTwo>();
-
-        if (playerTwo != null)
+        if(hitInfo.tag == "PlayerTwo" || hitInfo.tag == "PlayerOne")
         {
-            GameObject ammoTextPlayerTwo = GameObject.FindGameObjectWithTag("PlayerTwoAmmo");
-            GameObject weaponSlot = playerTwo.transform.GetChild(1).gameObject;
-            GameObject powerupdisplay = GameObject.FindGameObjectWithTag("PlayerTwoPowerUp");
-            powerupdisplay.GetComponent<SpriteRenderer>().sprite = WeaponHere.GetComponent<SpriteRenderer>().sprite;
-            WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
-            activateWeapon.activeWeapon = WeaponHere;
-            var weaponAmmoCapacity = WeaponHere.GetComponent<Weapons>().ammoCapacity; ;
-            playerTwo.specialAmmo = weaponAmmoCapacity;
-            playerTwo.maxAmmoCapacity = weaponAmmoCapacity;
-            ammoTextPlayerTwo.GetComponent<UnityEngine.UI.Text>().text = playerTwo.specialAmmo + "/" + weaponAmmoCapacity;
-            activateWeapon.initialize();
-            Instantiate(soundPrefab, transform.position, transform.rotation);
-            Destroy(gameObject);
-        }
-        if (playerOne != null)
-        {
-            GameObject ammoTextPlayerOne = GameObject.FindGameObjectWithTag("PlayerOneAmmo");
-            GameObject weaponSlot = playerOne.transform.GetChild(1).gameObject;
-            GameObject powerupdisplay = GameObject.FindGameObjectWithTag("PlayerOnePowerUp");
-            powerupdisplay.GetComponent<SpriteRenderer>().sprite = WeaponHere.GetComponent<SpriteRenderer>().sprite;
-            WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
-            activateWeapon.activeWeapon = WeaponHere;
-            var weaponAmmoCapacity = WeaponHere.GetComponent<Weapons>().ammoCapacity; ;
-            playerOne.specialAmmo = weaponAmmoCapacity;
-            playerOne.maxAmmoCapacity = weaponAmmoCapacity;
-            ammoTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = playerOne.specialAmmo + "/" + weaponAmmoCapacity;
-            activateWeapon.initialize();
-            Instantiate(soundPrefab, transform.position, transform.rotation);
-            Destroy(gameObject);
+            GameObject ammoText;
+            GameObject weaponSlot;
+            GameObject powerupdisplay;
+            var weaponAmmoCapacity = WeaponHere.GetComponent<Weapons>().ammoCapacity;
+            if (hitInfo.tag == "PlayerTwo")
+            {
+                var player = hitInfo.GetComponent<PlayerTwo>();
+                ammoText = GameObject.FindGameObjectWithTag("PlayerTwoAmmo");
+                weaponSlot = player.transform.GetChild(1).gameObject;
+                powerupdisplay = GameObject.FindGameObjectWithTag("PlayerTwoPowerUp");
+                player.specialAmmo = weaponAmmoCapacity;
+                player.maxAmmoCapacity = weaponAmmoCapacity;
+            }
+            else
+            {
+                var player = hitInfo.GetComponent<PlayerOne>();
+                ammoText = GameObject.FindGameObjectWithTag("PlayerOneAmmo");
+                weaponSlot = player.transform.GetChild(1).gameObject;
+                powerupdisplay = GameObject.FindGameObjectWithTag("PlayerOnePowerUp");
+                player.specialAmmo = weaponAmmoCapacity;
+                player.maxAmmoCapacity = weaponAmmoCapacity;
+            }
+                powerupdisplay.GetComponent<SpriteRenderer>().sprite = WeaponHere.GetComponent<SpriteRenderer>().sprite;
+                WeaponManager activateWeapon = weaponSlot.GetComponent<WeaponManager>();
+                activateWeapon.activeWeapon = WeaponHere;
+                ammoText.GetComponent<UnityEngine.UI.Text>().text = weaponAmmoCapacity + "/" + weaponAmmoCapacity;
+                activateWeapon.initialize();
+                Instantiate(soundPrefab, transform.position, transform.rotation);
+                Destroy(gameObject);
         }
     }
 }
