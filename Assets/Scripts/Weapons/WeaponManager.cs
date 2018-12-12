@@ -16,13 +16,13 @@ public class WeaponManager : MonoBehaviour
         wpn = activeWeapon.GetComponent<Weapons>();
         GetComponent<SpriteRenderer>().sprite = wpn.sprite;
     }
-    public float Shoot()
+    public float Shoot(string shooter)
     {
         if(canshoot && activeWeapon != null)
         {
             canshoot = false;
             StartCoroutine("Cooldown");
-
+            wpn.projectile.GetComponent<Ammo>().shooter = shooter;
             if (wpn.projectileMode == Weapons.Modes.Straight)
             {
                 GameObject projectile = (GameObject)Instantiate(wpn.projectile, transform.position + transform.parent.rotation * (activeWeapon.transform.GetChild(0).localPosition), transform.parent.rotation);

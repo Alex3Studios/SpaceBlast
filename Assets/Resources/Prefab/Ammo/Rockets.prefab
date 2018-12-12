@@ -114,6 +114,7 @@ MonoBehaviour:
   damage: 100
   rb: {fileID: 50802953268949184}
   destroytimer: 10
+  shooter: PlayerTwo
 --- !u!212 &212761866372997212
 SpriteRenderer:
   m_ObjectHideFlags: 1

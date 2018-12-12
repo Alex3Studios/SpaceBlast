@@ -46,7 +46,7 @@ public class PlayerOne : MonoBehaviour
             WeaponManager wm = weaponmanagerObject.GetComponent<WeaponManager>();
             if (specialAmmo > 0)
             {
-                float recoil = wm.Shoot();
+                float recoil = wm.Shoot(gameObject.tag);
                 Recoil(recoil);
                 if (recoil != 0)
                 {

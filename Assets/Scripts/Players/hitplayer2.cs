@@ -20,6 +20,8 @@ public class hitplayer2 : MonoBehaviour {
 		var player = gameObject.GetComponentInParent<PlayerTwo>();
         if(hitInfo.tag == "bullet" || hitInfo.tag == "Basic Bullet")
         {
+            Time.timeScale = 1;
+ 			Time.fixedDeltaTime = 0.02F;
             if(hitInfo.tag == "bullet")
             {
                 damage = hitInfo.GetComponent<Ammo>().damage;

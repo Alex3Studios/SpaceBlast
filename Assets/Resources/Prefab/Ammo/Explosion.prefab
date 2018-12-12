@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61158286463010172}
   - component: {fileID: 82533721667756982}
   - component: {fileID: 114412151185430136}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Explosion
   m_TagString: bullet
   m_Icon: {fileID: 0}
@@ -198,6 +198,7 @@ MonoBehaviour:
   damage: 50
   rb: {fileID: 50932431276541646}
   destroytimer: 1
+  shooter: 
 --- !u!212 &212207998774051172
 SpriteRenderer:
   m_ObjectHideFlags: 1

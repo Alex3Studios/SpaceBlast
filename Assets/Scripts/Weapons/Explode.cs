@@ -14,7 +14,7 @@ public class Explode : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.tag != "Crate")
+        if (hitInfo.tag != "Crate" && hitInfo.tag != "slowmo")
         {
             Instantiate(explosion, transform.position, transform.rotation);
         }

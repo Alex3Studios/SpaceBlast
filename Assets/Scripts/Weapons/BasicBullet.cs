@@ -17,9 +17,10 @@ public class BasicBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-
-        if (hitInfo.tag != "Crate")
+        if (hitInfo.tag != "Crate" && hitInfo.tag != "slowmo")
         {
+            Time.timeScale = 1;
+ 			Time.fixedDeltaTime = 0.02F;
             Destroy(gameObject);
         }
     }
