@@ -4,7 +4,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
 	bool gameHasEnded = false;
+	public string winner;
 
+	void Start () {
+		DontDestroyOnLoad(this.gameObject);
+	}
 	// Use this for end game
 	public void EndGame() {
 		if(gameHasEnded == false) {

@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 public class GameOverMenu : MonoBehaviour {
 
 	// Called when Play Again button is pressed
+
+	void Start () {
+		var winnertext = GameObject.FindGameObjectWithTag("winnertext");
+		winnertext.GetComponent<UnityEngine.UI.Text>().text = "Winner: " + FindObjectOfType<GameManager>().winner;
+	}
 	public void PlayAgain () {
 		SceneManager.LoadScene("Main");
 	}

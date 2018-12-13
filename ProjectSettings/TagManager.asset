@@ -18,6 +18,9 @@ TagManager:
   - PlayerTwoAmmo
   - Crate
   - slowmo
+  - Rounds
+  - scorekeeper
+  - winnertext
   layers:
   - Default
   - TransparentFX
@@ -69,4 +72,7 @@ TagManager:
     locked: 0
   - name: Status
     uniqueID: 2027619835
+    locked: 0
+  - name: Rounds
+    uniqueID: 3065871853
     locked: 0

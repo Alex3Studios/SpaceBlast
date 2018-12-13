@@ -100,15 +100,8 @@ public class PlayerTwo : MonoBehaviour
     void Die()
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
-        if (scoreCheck == true)
-        {
-            scoreCheck = false;
-            Destroy(gameObject);
-            ScoreText.PlayerOneScoreValue += 1;
-            GameObject powerup = GameObject.FindGameObjectWithTag("PlayerTwoPowerUp");
-            powerup.GetComponent<SpriteRenderer>().sprite = powerup.GetComponent<powerup>().defaultsprite;
-            GameObject ammoTextPlayerTwo = GameObject.FindGameObjectWithTag("PlayerTwoAmmo");
-            ammoTextPlayerTwo.GetComponent<UnityEngine.UI.Text>().text = "  0" + "/" + "0";
-        }
+        ScoreManager round = GameObject.FindGameObjectWithTag("Rounds").GetComponent<ScoreManager>();
+        round.Winner(gameObject.tag);
+        Destroy(gameObject);
     }
 }

@@ -99,13 +99,9 @@ public class PlayerOne : MonoBehaviour
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
         if (scoreCheck == true)
         {
-            scoreCheck = false;
+            ScoreManager round = GameObject.FindGameObjectWithTag("Rounds").GetComponent<ScoreManager>();
+            round.Winner(gameObject.tag);
             Destroy(gameObject);
-            ScoreText.PlayerTwoScoreValue += 1;
-            GameObject powerup = GameObject.FindGameObjectWithTag("PlayerOnePowerUp");
-            powerup.GetComponent<SpriteRenderer>().sprite = powerup.GetComponent<powerup>().defaultsprite;
-            GameObject ammoTextPlayerOne = GameObject.FindGameObjectWithTag("PlayerOneAmmo");
-            ammoTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = "  0" + "/" + "0";
         }
     }
 
