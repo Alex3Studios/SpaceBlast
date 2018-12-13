@@ -45,6 +45,8 @@ public class ScoreManager : MonoBehaviour {
 
 		if(temp != 3)
 		{
+			Time.timeScale = 1;
+            Time.fixedDeltaTime = 0.02F;
 			SceneManager.LoadScene("Main");
 		}
 		else

@@ -21,6 +21,7 @@ public class slowmoplayer1 : MonoBehaviour {
 			string shooter = hitInfo.GetComponent<Ammo>().shooter;
 			if(shooter != "PlayerOne" &&  hitInfo.gameObject.layer != 16)
 			{
+				Debug.Log("Enter: " + hitInfo.tag);
 				Time.timeScale = 0.3f;
     			Time.fixedDeltaTime = 0.02F * Time.timeScale;
 			}
@@ -30,6 +31,7 @@ public class slowmoplayer1 : MonoBehaviour {
     {
         if(hitInfo.tag == "bullet")
         {
+			Debug.Log("Exit: " + hitInfo.tag);
 			Time.timeScale = 1;
  			Time.fixedDeltaTime = 0.02F;
         }
