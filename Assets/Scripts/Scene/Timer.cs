@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        playerRespawnTimer = respawnTimePlayer;
+        //playerRespawnTimer = respawnTimePlayer;
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class Timer : MonoBehaviour
             SpawnRandomWeapon();
         }
 
-        if (GameObject.Find("PlayerOne") == null && GameObject.Find("PlayerOne(Clone)") == null)
+        /*if (GameObject.Find("PlayerOne") == null && GameObject.Find("PlayerOne(Clone)") == null)
         {
             playerRespawnTimer -= Time.deltaTime;
             if (playerRespawnTimer <= 0)
@@ -43,7 +43,7 @@ public class Timer : MonoBehaviour
             respawnTimePlayer -= Time.deltaTime;
             if (respawnTimePlayer <= 0)
                 SpawnPlayer("Two");
-        }
+        }*/
 
     }
     void GenerateRandomPosition()
@@ -63,11 +63,6 @@ public class Timer : MonoBehaviour
         Vector2 pos2 = new Vector2(x2, y2);
 
         GameObject wep = weaponList[Random.Range(0, weaponList.Length)];
-        /*Instantiate(crate, pos, transform.rotation);
-        Instantiate(wep, pos, transform.rotation);
-        wep = weaponList[Random.Range(0, weaponList.Length)];
-        Instantiate(crate, pos2, transform.rotation);
-        Instantiate(wep, pos2, transform.rotation);*/
         Crate lootcrate = crate.GetComponent<Crate>();
         lootcrate.WeaponHere = wep;
         crate.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = wep.GetComponent<SpriteRenderer>().sprite;
@@ -81,7 +76,7 @@ public class Timer : MonoBehaviour
 
 
 
-    void SpawnPlayer(string playerNumber)
+    /*void SpawnPlayer(string playerNumber)
     {
         GenerateRandomPosition();
         float playerOneX;
@@ -133,5 +128,5 @@ public class Timer : MonoBehaviour
         GameObject playerRespawn = (GameObject)Resources.Load("Prefab/Players/Player" + playerNumber, typeof(GameObject));
         Instantiate(playerRespawn, pos, transform.rotation);
         respawnTimePlayer = playerRespawnTimer;
-    }
+    }*/
 }

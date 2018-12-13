@@ -24,6 +24,11 @@ public class rounds : MonoBehaviour {
 
 	public int Won(int winner)
 	{
+		if(round == 0)
+		{
+			yellowwins = 0;
+			greenwins = 0;
+		}
 		roundwinner[round] = winner;
 		round++;
 		if(winner == 0)

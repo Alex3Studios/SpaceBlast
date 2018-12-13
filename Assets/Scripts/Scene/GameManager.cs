@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-	bool gameHasEnded = false;
 	public string winner;
 
 	void Start () {
@@ -11,11 +10,7 @@ public class GameManager : MonoBehaviour {
 	}
 	// Use this for end game
 	public void EndGame() {
-		if(gameHasEnded == false) {
-			gameHasEnded = true;
-			Debug.Log("GAME OVER");
-			GameOver();
-		}
+		GameOver();
 	}
 
 	// Can be called to restart current scene
