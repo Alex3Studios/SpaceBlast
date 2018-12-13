@@ -15,7 +15,6 @@ public class PlayerOne : MonoBehaviour
 
     void Start()
     {
-        ScoreText.PlayerOneHealthValue = health;
         Sprite healthBarSprite = Resources.Load<Sprite>("Standard Assets/GamePlayModels/Health bar15");
         healthBar.GetComponent<SpriteRenderer>().sprite = healthBarSprite;
     }
@@ -86,12 +85,10 @@ public class PlayerOne : MonoBehaviour
 
         if (health <= 0)
         {
-            ScoreText.PlayerOneHealthValue = 0;
             Die();
         }
         else
         {
-            ScoreText.PlayerOneHealthValue = health;
             float tempHealth = health;
             int count = 0;
             while (tempHealth > 1)
