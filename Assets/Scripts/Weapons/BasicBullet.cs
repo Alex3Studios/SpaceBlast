@@ -19,8 +19,6 @@ public class BasicBullet : MonoBehaviour
     {
         if (hitInfo.tag != "Crate" && hitInfo.tag != "slowmo")
         {
-            Time.timeScale = 1;
- 			Time.fixedDeltaTime = 0.02F;
             Destroy(gameObject);
         }
     }

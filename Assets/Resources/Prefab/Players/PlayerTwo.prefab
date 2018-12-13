@@ -88,7 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4703002185194412}
   - component: {fileID: 58434362484797734}
-  - component: {fileID: 114092906825885154}
+  - component: {fileID: 114380582897231678}
   m_Layer: 11
   m_Name: Unsafe
   m_TagString: slowmo
@@ -142,7 +142,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1757260420453778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.28, y: -12.71, z: 0}
+  m_LocalPosition: {x: 23.32, y: -13.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4332450088458392}
@@ -250,17 +250,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.373529, y: 2.3962133}
   m_EdgeRadius: 0
---- !u!114 &114092906825885154
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1796785522984538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a019af4e705a6428dd174939cb72e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114339987165447482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,6 +273,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeWeapon: {fileID: 0}
+--- !u!114 &114380582897231678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1796785522984538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0c3a4c4773b74343b839e3df984b63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114758539253515822
 MonoBehaviour:
   m_ObjectHideFlags: 1
