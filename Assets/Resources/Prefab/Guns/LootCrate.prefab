@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3087c360973aaa24ab3d77451e743704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponHere: {fileID: 1524888782144842, guid: 02dd12bf96c15bf41ac9575ea90adae4, type: 2}
+  WeaponHere: {fileID: 1436978397492686, guid: d4dc894dade028d40bf451672afad91f, type: 2}
   soundPrefab: {fileID: 1800037617758242, guid: 26f3a3e2313857646adab4e9cb08c582,
     type: 2}
 --- !u!212 &212131021116042482
@@ -218,7 +218,7 @@ SpriteRenderer:
   m_SortingLayerID: -1145749573
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300006, guid: 0b67a93211898be4e9a52a9636730abd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b67a93211898be4e9a52a9636730abd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

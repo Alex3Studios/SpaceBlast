@@ -4,31 +4,31 @@ using System.Collections;
 public class CameraShake : MonoBehaviour
 {
     Vector3 centerPos;
-    public Transform camera;
+    public Transform cameraT;
     public static float shakeDuration;
     public float shakeForce = 0.15f;
 
     void Start()
     {
-        centerPos = camera.localPosition;
+        centerPos = cameraT.localPosition;
     }
     void Awake()
     {
-        if (camera == null)
-            camera = GetComponent(typeof(Transform)) as Transform;
+        if (cameraT == null)
+            cameraT = GetComponent(typeof(Transform)) as Transform;
     }
 
     void Update()
     {
         if (shakeDuration > 0)
         {
-            camera.localPosition = centerPos + Random.insideUnitSphere * shakeForce;
+            cameraT.localPosition = centerPos + Random.insideUnitSphere * shakeForce;
             shakeDuration -= Time.deltaTime;
         }
         else
         {
             shakeDuration = 0f;
-            camera.localPosition = centerPos;
+            cameraT.localPosition = centerPos;
         }
     }
 }

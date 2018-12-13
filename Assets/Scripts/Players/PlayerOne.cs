@@ -11,11 +11,13 @@ public class PlayerOne : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     private Player player1;
-    public GameObject deathEffect;
+    public GameObject healthBar;
 
     void Start()
     {
         ScoreText.PlayerOneHealthValue = health;
+        Sprite healthBarSprite = Resources.Load<Sprite>("Standard Assets/GamePlayModels/Health bar15");
+        healthBar.GetComponent<SpriteRenderer>().sprite = healthBarSprite;
     }
 
     void Awake()
@@ -90,14 +92,24 @@ public class PlayerOne : MonoBehaviour
         else
         {
             ScoreText.PlayerOneHealthValue = health;
+            float tempHealth = health;
+            int count = 0;
+            while (tempHealth > 1)
+            {
+                tempHealth -= 71.36f;
+                count++;
+            }
+            Sprite healthBarSprite = Resources.Load<Sprite>("Standard Assets/GamePlayModels/Health bar" + count);
+            healthBar.GetComponent<SpriteRenderer>().sprite = healthBarSprite;
         }
     }
     void Die()
     {
-        //Instantiate(deathEffect, transform.position, Quaternion.identity);
         ScoreManager round = GameObject.FindGameObjectWithTag("Rounds").GetComponent<ScoreManager>();
         round.Winner(gameObject.tag);
         Destroy(gameObject);
+        Sprite healthBarSprite = Resources.Load<Sprite>("Standard Assets/GamePlayModels/Health bar0");
+        healthBar.GetComponent<SpriteRenderer>().sprite = healthBarSprite;
     }
 
 }

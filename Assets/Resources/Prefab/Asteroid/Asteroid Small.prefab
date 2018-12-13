@@ -96,6 +96,10 @@ MonoBehaviour:
   asteroidMedium: {fileID: 1993182490157014, guid: a60552e8e970b456c9aeacf04f1a961e,
     type: 2}
   asteroidSmall: {fileID: 1513681568372258}
+  xRight: 50
+  xLeft: -32
+  yTop: 15
+  yBottom: -30
 --- !u!212 &212496805959992274
 SpriteRenderer:
   m_ObjectHideFlags: 1

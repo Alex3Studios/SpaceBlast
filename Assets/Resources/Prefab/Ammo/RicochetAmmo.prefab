@@ -92,6 +92,7 @@ MonoBehaviour:
   damage: 100
   rb: {fileID: 50492434552004894}
   destroytimer: 4
+  shooter: PlayerOne
 --- !u!212 &212462506961317232
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -132,7 +133,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.4, y: 0.5}
+  m_Size: {x: 0.45, y: 0.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

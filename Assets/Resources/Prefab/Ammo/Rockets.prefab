@@ -81,7 +81,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.0666667, y: 1.0666667}
-    newSize: {x: 1.2, y: 1.2}
+    newSize: {x: 1.0666667, y: 1.0666667}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -114,7 +114,7 @@ MonoBehaviour:
   damage: 100
   rb: {fileID: 50802953268949184}
   destroytimer: 10
-  shooter: PlayerTwo
+  shooter: PlayerOne
 --- !u!212 &212761866372997212
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -155,7 +155,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.2, y: 1.2}
+  m_Size: {x: 1.0666667, y: 1.0666667}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
