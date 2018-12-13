@@ -31,8 +31,9 @@ public class PlayerTwo : MonoBehaviour
         float MoveX = player2.GetAxis("RotateX");
         float MoveY = player2.GetAxis("RotateY");
         float heading = Mathf.Atan2(MoveY, MoveX);
+        if (heading != 0)
+            transform.rotation = Quaternion.Euler(0f, 0f, heading * Mathf.Rad2Deg);
 
-        transform.rotation = Quaternion.Euler(0f, 0f, heading * Mathf.Rad2Deg);
         if (player2.GetButtonDown("Shoot"))
         {
             Shoot();
