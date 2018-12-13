@@ -12,12 +12,10 @@ public class PlayerTwo : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     private Player player2;
-    bool scoreCheck;
     public GameObject deathEffect;
     void Start()
     {
         ScoreText.PlayerTwoHealthValue = health;
-        scoreCheck = true;
     }
     void Awake()
     {

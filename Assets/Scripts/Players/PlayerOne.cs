@@ -10,14 +10,12 @@ public class PlayerOne : MonoBehaviour
     public int maxAmmoCapacity;
     public Transform firePoint;
     public GameObject bulletPrefab;
-    bool scoreCheck;
     private Player player1;
     public GameObject deathEffect;
 
     void Start()
     {
         ScoreText.PlayerOneHealthValue = health;
-        scoreCheck = true;
     }
 
     void Awake()
@@ -97,12 +95,9 @@ public class PlayerOne : MonoBehaviour
     void Die()
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
-        if (scoreCheck == true)
-        {
-            ScoreManager round = GameObject.FindGameObjectWithTag("Rounds").GetComponent<ScoreManager>();
-            round.Winner(gameObject.tag);
-            Destroy(gameObject);
-        }
+        ScoreManager round = GameObject.FindGameObjectWithTag("Rounds").GetComponent<ScoreManager>();
+        round.Winner(gameObject.tag);
+        Destroy(gameObject);
     }
 
 }
