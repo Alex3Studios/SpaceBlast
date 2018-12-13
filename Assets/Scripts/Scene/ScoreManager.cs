@@ -30,15 +30,6 @@ public class ScoreManager : MonoBehaviour {
 		}
 	}
 
-	void Awake() {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-	}
-
 	public void Winner(string looser)
 	{
 		int temp = 0;
@@ -50,6 +41,8 @@ public class ScoreManager : MonoBehaviour {
 		{
 			temp = roundmanager.Won(1);
 		}
+
+
 		if(temp != 3)
 		{
 			SceneManager.LoadScene("Main");
