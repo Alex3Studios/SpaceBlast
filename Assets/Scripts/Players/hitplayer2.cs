@@ -2,31 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class hitplayer2 : MonoBehaviour {
+public class hitplayer2 : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Use this for initialization
+    void Start()
+    {
 
-	void OnTriggerEnter2D(Collider2D hitInfo)
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    void OnTriggerEnter2D(Collider2D hitInfo)
     {
         int damage;
-		var player = gameObject.GetComponentInParent<PlayerTwo>();
-        if(hitInfo.tag == "bullet" || hitInfo.tag == "Basic Bullet")
+        var player = gameObject.GetComponentInParent<PlayerTwo>();
+        if (hitInfo.tag == "bullet" || hitInfo.tag == "Basic Bullet")
         {
             Time.timeScale = 1;
- 			Time.fixedDeltaTime = 0.02F;
-            if(hitInfo.tag == "bullet")
+            Time.fixedDeltaTime = 0.02F;
+            if (hitInfo.tag == "bullet")
             {
                 damage = hitInfo.GetComponent<Ammo>().damage;
                 Destroy(hitInfo.gameObject);
-				player.TakeDamage(damage);
+                player.TakeDamage(damage);
+                CameraShake.shakeDuration = 0.05f;
             }
             else
             {
