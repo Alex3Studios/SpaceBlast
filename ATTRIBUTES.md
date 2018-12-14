@@ -1,11 +1,12 @@
-## Assets in Space Blast!
+## Attributes in Space Blast!
 
-The assets used in the game Space Blast! and listed in the following sections are borrowed from and credit goes to:
+The attributes used in the game Space Blast! and listed in the following sections are borrowed from and credit goes to:
 
 
-### Background
+### [Arnar Ingólfsson](https://www.linkedin.com/in/arnar-ing%C3%B3lfsson-84647252/)
 
-[Arnar Ingólfsson](https://www.linkedin.com/in/arnar-ing%C3%B3lfsson-84647252/)
+* Background
+* Borders
 
 ### Character Model  
 [Master484](https://opengameart.org/content/space-soldier-m484-games)
