@@ -8,11 +8,13 @@ The attributes used in the game Space Blast! and listed in the following section
 * Background
 * Borders
 
-### Character Model  
-[Master484](https://opengameart.org/content/space-soldier-m484-games)
+### [Master484](https://opengameart.org/content/space-soldier-m484-games)
 
-### Asteroids
-[Phaelax](https://forum.thegamecreators.com/thread/209786)
+* Character Models
+
+### [Phaelax](https://forum.thegamecreators.com/thread/209786)
+
+* Asteroids
 
 ### Weapons
 * Pistol - [DieMango](https://opengameart.org/content/gun-sprites-3)
