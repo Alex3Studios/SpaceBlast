@@ -14,7 +14,7 @@ public class GameOverMenu : MonoBehaviour {
 		}
 	}
 	public void PlayAgain () {
-		SceneManager.LoadScene("Main");
+		SceneManager.LoadScene("CountDown");
 	}
 
 	// Called when Main Menu button is pressed

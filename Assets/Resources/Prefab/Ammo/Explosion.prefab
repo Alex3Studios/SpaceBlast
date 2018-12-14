@@ -197,6 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 50
   rb: {fileID: 50932431276541646}
+  soundPrefab: {fileID: 0}
   destroytimer: 1
   shooter: 
 --- !u!212 &212207998774051172

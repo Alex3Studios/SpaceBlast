@@ -7,6 +7,6 @@ public class StartMenu : MonoBehaviour {
 
 	// Called when Start Game button is pressed
 	public void StartGame () {
-		SceneManager.LoadScene("Main");
+		SceneManager.LoadScene("CountDown");
 	}
 }

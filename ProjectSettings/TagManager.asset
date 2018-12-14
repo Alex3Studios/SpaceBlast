@@ -21,6 +21,7 @@ TagManager:
   - Rounds
   - scorekeeper
   - winnertext
+  - countdown
   layers:
   - Default
   - TransparentFX

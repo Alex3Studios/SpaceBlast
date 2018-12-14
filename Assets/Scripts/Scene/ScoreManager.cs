@@ -53,7 +53,7 @@ public class ScoreManager : MonoBehaviour {
 			{
 				Time.timeScale = 1;
 				Time.fixedDeltaTime = 0.02F;
-				SceneManager.LoadScene("Main");
+				SceneManager.LoadScene("CountDown");
 			}
 			else
 			{
