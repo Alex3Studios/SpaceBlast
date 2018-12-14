@@ -30,3 +30,13 @@ The attributes used in the game Space Blast! and listed in the following section
 
 * Arial
 * [BeatStreet](https://www.1001freefonts.com/beatstreet.font)
+
+### Sound
+
+#### [Amac1990](https://opengameart.org/content/karma8-bit)
+
+* Background Music
+
+#### Sound Effects
+
+* 
