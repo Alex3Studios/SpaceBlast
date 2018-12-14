@@ -7,12 +7,18 @@ Space, the final frontier. Two ships of opposing factions meet when one travelli
 
 ### Prerequisites
 
-To be able to play the game you need access to a build of the game as well as two controllers.
+To be able to play the game you need access to a build of the game as well as two controllers. To be able to make a build of the game from the project you 
+
+* access [the public github repo](https://github.com/Alex3Studios/SpaceBlast)
+* clone the git repository OR download a zip file and extract it
+* go to File &rarr; Build Settings
+* choose your preferred target platform
+* press `Build`
 
 
 ### Running the game
 
-Click on the build and run it.
+Click on the build file, choose your preferred screen resolution and graphics quality and finally run it by pressing `Play!`.
 
 #### Example of gameplay
 
@@ -24,17 +30,14 @@ PICTURES
 Description of known problems at a given time.
 
 
-## Built With
+## Built With and Compiled On
 
-* ?
-
-## Compiled On
-
-* ?
+* Unity 2018.2.17f1 Personal on macOS Mojave 10.14
+* Unity 2018.2.18f1 Personal on Windows 10 Home 1803
 
 ## Attributes
 
-See [Assets.](ASSETS.md)
+See [Attributes.](ATTRIBUTES.md)
 
 ## Authors
 
