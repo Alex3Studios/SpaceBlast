@@ -7,6 +7,7 @@ public class Ammo : MonoBehaviour
 
     public int damage;
     public Rigidbody2D rb;
+    public GameObject soundPrefab;
     public float destroytimer;
     public string shooter;
 
@@ -23,6 +24,8 @@ public class Ammo : MonoBehaviour
         {
             Time.timeScale = 1;
             Time.fixedDeltaTime = 0.02F;
+            if (soundPrefab != null)
+                Instantiate(soundPrefab, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

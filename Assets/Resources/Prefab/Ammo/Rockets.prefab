@@ -113,6 +113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 100
   rb: {fileID: 50802953268949184}
+  soundPrefab: {fileID: 1682504527187584, guid: 24ae9366a6fac6844881b2f856a36c2f,
+    type: 2}
   destroytimer: 10
   shooter: PlayerOne
 --- !u!212 &212761866372997212
