@@ -15,7 +15,7 @@ public class PlayerTwo : MonoBehaviour
     public GameObject healthBar;
     void Start()
     {
-        Sprite healthBarSprite = Resources.Load<Sprite>("Standard Assets/GamePlayModels/Health bar15");
+        Sprite healthBarSprite = Resources.Load<Sprite>("Health/Health bar15");
         healthBar.GetComponent<SpriteRenderer>().sprite = healthBarSprite;
     }
     void Awake()
@@ -98,7 +98,7 @@ public class PlayerTwo : MonoBehaviour
                 tempHealth -= 71.36f;
                 count++;
             }
-            Sprite healthBarSprite = Resources.Load<Sprite>("Standard Assets/GamePlayModels/Health bar" + count);
+            Sprite healthBarSprite = Resources.Load<Sprite>("Health/Health bar" + count);
             healthBar.GetComponent<SpriteRenderer>().sprite = healthBarSprite;
         }
     }
@@ -108,7 +108,7 @@ public class PlayerTwo : MonoBehaviour
         ScoreManager round = GameObject.FindGameObjectWithTag("Rounds").GetComponent<ScoreManager>();
         round.Winner(gameObject.tag);
         Destroy(gameObject);
-        Sprite healthBarSprite = Resources.Load<Sprite>("Standard Assets/GamePlayModels/Health bar0");
+        Sprite healthBarSprite = Resources.Load<Sprite>("Health/Health bar0");
         healthBar.GetComponent<SpriteRenderer>().sprite = healthBarSprite;
     }
 }

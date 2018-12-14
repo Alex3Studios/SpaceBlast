@@ -20,7 +20,7 @@ public class PlayerOne : MonoBehaviour
     {
         jetpackOff = Resources.Load<GameObject>("Prefab/Gadgets/Jetpack_off").GetComponent<SpriteRenderer>().sprite;
         jetpackOn = Resources.Load<GameObject>("Prefab/Gadgets/Jetpack_on").GetComponent<SpriteRenderer>().sprite;
-        Sprite healthBarSprite = Resources.Load<Sprite>("Standard Assets/GamePlayModels/Health bar15");
+        Sprite healthBarSprite = Resources.Load<Sprite>("Health/Health bar15");
         healthBar.GetComponent<SpriteRenderer>().sprite = healthBarSprite;
     }
 
@@ -116,7 +116,7 @@ public class PlayerOne : MonoBehaviour
                 tempHealth -= 71.36f;
                 count++;
             }
-            Sprite healthBarSprite = Resources.Load<Sprite>("Standard Assets/GamePlayModels/Health bar" + count);
+            Sprite healthBarSprite = Resources.Load<Sprite>("Health/Health bar" + count);
             healthBar.GetComponent<SpriteRenderer>().sprite = healthBarSprite;
         }
     }
@@ -125,7 +125,7 @@ public class PlayerOne : MonoBehaviour
         ScoreManager round = GameObject.FindGameObjectWithTag("Rounds").GetComponent<ScoreManager>();
         round.Winner(gameObject.tag);
         Destroy(gameObject);
-        Sprite healthBarSprite = Resources.Load<Sprite>("Standard Assets/GamePlayModels/Health bar0");
+        Sprite healthBarSprite = Resources.Load<Sprite>("Health/Health bar0");
         healthBar.GetComponent<SpriteRenderer>().sprite = healthBarSprite;
     }
 
