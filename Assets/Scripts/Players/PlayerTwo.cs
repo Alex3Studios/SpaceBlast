@@ -87,7 +87,6 @@ public class PlayerTwo : MonoBehaviour
 
         if (health <= 0)
         {
-            Debug.Log("Dead");
             Die();
         }
         else
