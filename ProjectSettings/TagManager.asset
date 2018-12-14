@@ -22,6 +22,7 @@ TagManager:
   - scorekeeper
   - winnertext
   - countdown
+  - music
   layers:
   - Default
   - TransparentFX
