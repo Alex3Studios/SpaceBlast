@@ -11,6 +11,8 @@ public class ScoreManager : MonoBehaviour {
 
 	private rounds roundmanager;
 
+	private int frame;
+
 	// Use this for initialization
 	void Start () {
 		roundmanager = GameObject.FindGameObjectWithTag("scorekeeper").GetComponent<rounds>();
@@ -32,36 +34,41 @@ public class ScoreManager : MonoBehaviour {
 
 	public void Winner(string looser)
 	{
-		int temp = 0;
-		if(looser == "PlayerTwo")
+		if(frame != Time.frameCount)
 		{
-			temp = roundmanager.Won(0);
-		}
-		else
-		{
-			temp = roundmanager.Won(1);
-		}
-
-
-		if(temp != 3)
-		{
-			Time.timeScale = 1;
-            Time.fixedDeltaTime = 0.02F;
-			SceneManager.LoadScene("Main");
-		}
-		else
-		{
-			roundmanager.round = 0;
-			GameManager gm = FindObjectOfType<GameManager>();
+			frame = Time.frameCount;
+			//Debug.Log(looser + " Frame: " + Time.frameCount);
+			int temp = 0;
 			if(looser == "PlayerTwo")
 			{
-				gm.winner = "Yellow";
+				temp = roundmanager.Won(0);
 			}
 			else
 			{
-				gm.winner = "Green";
+				temp = roundmanager.Won(1);
 			}
-			gm.EndGame();
+
+
+			if(temp != 3)
+			{
+				Time.timeScale = 1;
+				Time.fixedDeltaTime = 0.02F;
+				SceneManager.LoadScene("Main");
+			}
+			else
+			{
+				GameManager gm = FindObjectOfType<GameManager>();
+				if(looser == "PlayerTwo")
+				{
+					gm.winner = "Yellow";
+				}
+				else
+				{
+					gm.winner = "Green";
+				}
+				roundmanager.round = 0;
+				gm.EndGame();
+			}
 		}
 	}
 }

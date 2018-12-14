@@ -21,7 +21,6 @@ public class Ammo : MonoBehaviour
     {
         if (hitInfo.tag != "Crate" && gameObject.layer != 14 && hitInfo.tag != "slowmo")
         {
-            Debug.Log("Destroyed: " + hitInfo.tag);
             Time.timeScale = 1;
             Time.fixedDeltaTime = 0.02F;
             Destroy(gameObject);
