@@ -28,8 +28,8 @@ The attributes used in the game Space Blast! and listed in the following section
 
 ### Fonts
 
-* Arial
-* [BeatStreet](https://www.1001freefonts.com/beatstreet.font)
+* Retro2000 - [Vasily Draigo aka Daymarius](https://www.1001freefonts.com/retron2000.font)
+* BeatStreet- [Punkto Design](https://www.1001freefonts.com/beatstreet.font)
 
 ### Sound
 
