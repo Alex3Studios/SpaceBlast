@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c8822fa9257ff4547bd5e706d1569d47
+guid: 615105b1f655d1941add653fcc8b4506
 TextureImporter:
   fileIDToRecycleName:
-    21300000: dannorder-monkey on mars-cc0_0
-    21300002: dannorder-monkey on mars-cc0_1
-    21300004: dannorder-monkey on mars-cc0_2
+    21300000: Jetpack_0
+    21300002: Jetpack_1
+    21300004: Jetpack_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -87,13 +87,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dannorder-monkey on mars-cc0_0
+      name: Jetpack_0
       rect:
         serializedVersion: 2
         x: 4
-        y: 54
+        y: 48
         width: 4
-        height: 9
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,19 +101,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85ed89b475cc2034d9ce40d1ad4adbce
+      spriteID: d41becb847662fd41990a8f3e96d7c8a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dannorder-monkey on mars-cc0_1
+      name: Jetpack_1
       rect:
         serializedVersion: 2
         x: 4
-        y: 28
+        y: 25
         width: 4
-        height: 12
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,13 +121,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08a27368de509d3439a22feb571a8f72
+      spriteID: 8114f5bcecd29034986f9508a7af7065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dannorder-monkey on mars-cc0_2
+      name: Jetpack_2
       rect:
         serializedVersion: 2
         x: 4
@@ -141,7 +141,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 855eefd8814ad6a4b8a8d2019df88b41
+      spriteID: 8fa25eba2196bb44191d228fd4fb040c
       vertices: []
       indices: 
       edges: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d052fb6069af31544b7be9da6ffa64ca
+    spriteID: 1be692d1727c7124b90b654e6a1e6c75
     vertices: []
     indices: 
     edges: []

@@ -8,13 +8,18 @@ public class PlayerOne : MonoBehaviour
     public int health = 1000;
     public int specialAmmo;
     public int maxAmmoCapacity;
+    public static int fuel;
     public Transform firePoint;
     public GameObject bulletPrefab;
     private Player player1;
+    private Sprite jetpackOn;
+    private Sprite jetpackOff;
     public GameObject healthBar;
 
     void Start()
     {
+        jetpackOff = Resources.Load<GameObject>("Prefab/Gadgets/Jetpack_off").GetComponent<SpriteRenderer>().sprite;
+        jetpackOn = Resources.Load<GameObject>("Prefab/Gadgets/Jetpack_on").GetComponent<SpriteRenderer>().sprite;
         Sprite healthBarSprite = Resources.Load<Sprite>("Standard Assets/GamePlayModels/Health bar15");
         healthBar.GetComponent<SpriteRenderer>().sprite = healthBarSprite;
     }
@@ -28,6 +33,7 @@ public class PlayerOne : MonoBehaviour
     void Update()
     {
         GameObject ammoTextPlayerOne = GameObject.FindGameObjectWithTag("PlayerOneAmmo");
+        Sprite jetpackSlot = gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite;
         float MoveX = player1.GetAxis("RotateX");
         float MoveY = player1.GetAxis("RotateY");
         float heading = Mathf.Atan2(MoveY, MoveX);
@@ -39,7 +45,17 @@ public class PlayerOne : MonoBehaviour
             Shoot();
             Recoil(7);
         }
-        if (player1.GetButtonDown("PowerUp"))
+        if (jetpackSlot && player1.GetButton("gadget"))
+        {
+            GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
+            fuel -= 1;
+            gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOn;
+            if (fuel < 1)
+            {
+                gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = null;
+            }
+        }
+        else if (player1.GetButtonDown("PowerUp"))
         {
             GameObject weaponmanagerObject = transform.GetChild(1).gameObject;
             WeaponManager wm = weaponmanagerObject.GetComponent<WeaponManager>();
@@ -59,6 +75,10 @@ public class PlayerOne : MonoBehaviour
             {
                 RemoveWeapon(ammoTextPlayerOne, wm);
             }
+        }
+        else if (jetpackSlot)
+        {
+            gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOff;
         }
     }
 
