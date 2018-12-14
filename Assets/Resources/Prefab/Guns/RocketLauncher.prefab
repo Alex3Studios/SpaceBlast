@@ -113,7 +113,7 @@ MonoBehaviour:
   ammoCapacity: 8
   projectileSpeed: 40
   cooldown: 2
-  recoil: 50
+  recoil: 60
   projectileMode: 1
 --- !u!212 &212281593149157168
 SpriteRenderer:
