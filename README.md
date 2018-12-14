@@ -2,17 +2,37 @@
 
 Game by the team A^3 in the 3 week course SC-T-624-CGDD Computer Game Design & Development at the University of Reykjavík, fall 2018.
 
-Space, the final frontier. Two ships of opposing factions meet when one travelling gun merchant is taking a detour through enemy territory. The two ships crash and are damged badly. The only way for them to escape is to salvage parts from the enemy ship to repair their own to be able to fly away from this space's harsh environments. Their onboard gun system is offline & they leave their ship and fight out in space. A two person shooter where players have to adapt to the environments of space where there is little gravity by moving with the with the force of shooting in opposite directions. 
+Space, the final frontier. Two ships of opposing factions meet when one travelling gun merchant is taking a detour through enemy territory. The two ships crash and are damged badly. The only way for them to escape is to salvage parts from the enemy ship to repair their own to be able to fly away from this space's harsh environments. Their onboard gun system is offline & they leave their ships and fight out in space. 
+
+
+### Game-play
+
+A two person shooter where players have to adapt to the environments of space where there is little gravity by moving with the force of shooting in opposite directions. 
+
+The goal is to win 3 out of the 5 available rounds in a battle. The first player to win 3 rounds wins the battle and is declared the winner. 
 
 
 ### Prerequisites
 
-To be able to play the game you need access to a build of the game as well as two controllers.
+To be able to play the game you need access to a build of the game as well as two controllers. To be able to make a build of the game from the project you 
+
+* Access [the public github repo](https://github.com/Alex3Studios/SpaceBlast)
+* Clone the git repository OR download a zip file and extract it
+* Go to File &rarr; Build Settings
+* Choose your preferred target platform
+* Press `Build`
 
 
 ### Running the game
 
-Click on the build and run it.
+Click on the build file, choose your preferred screen resolution and graphics quality and finally run it by pressing `Play!`.
+
+#### Game Mechanics
+
+* Use controller's left joystick to turn in desired directions
+* Move player over power-up boxes to pick them up
+* Press `X` to shoot with the basic gun
+* Press `O` to shoot with special power-up guns
 
 #### Example of gameplay
 
@@ -24,17 +44,14 @@ PICTURES
 Description of known problems at a given time.
 
 
-## Built With
+## Built With and Compiled On
 
-* ?
-
-## Compiled On
-
-* ?
+* Unity 2018.2.17f1 Personal on macOS Mojave 10.14
+* Unity 2018.2.18f1 Personal on Windows 10 Home 1803
 
 ## Attributes
 
-See [Assets.](ASSETS.md)
+See [Attributes.](ATTRIBUTES.md)
 
 ## Authors
 
