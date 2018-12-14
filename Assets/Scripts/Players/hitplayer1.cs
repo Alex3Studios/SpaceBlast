@@ -36,6 +36,8 @@ public class hitplayer1 : MonoBehaviour
                 Destroy(hitInfo.gameObject);
                 player.TakeDamage(damage);
             }
+            Time.timeScale = 1;
+            Time.fixedDeltaTime = 0.02F;
         }
     }
 }

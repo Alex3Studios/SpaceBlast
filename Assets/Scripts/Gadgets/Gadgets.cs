@@ -38,7 +38,7 @@ public class Gadgets : MonoBehaviour
             jetpack = player.transform.GetChild(4).gameObject;
             GameObject jetpackSprite = Resources.Load<GameObject>("Prefab/Gadgets/Jetpack_off");
             jetpack.GetComponent<SpriteRenderer>().sprite = jetpackSprite.GetComponent<SpriteRenderer>().sprite;
-            PlayerOne.fuel = 100;
+            hitInfo.GetComponent<PlayerOne>().fuel = 1000;
             Destroy(gameObject);
         }
     }
