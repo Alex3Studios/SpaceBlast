@@ -8,7 +8,7 @@ public class PlayerOne : MonoBehaviour
     public int health = 1000;
     public int specialAmmo;
     public int maxAmmoCapacity;
-    public static int fuel;
+    public int fuel;
     public Transform firePoint;
     public GameObject bulletPrefab;
     private Player player1;

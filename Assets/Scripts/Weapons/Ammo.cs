@@ -15,7 +15,7 @@ public class Ammo : MonoBehaviour
     void Start()
     {
         //Destroy(gameObject, destroytimer);
-        StartCoroutine("DestroyByTime");
+        StartCoroutine(DestroyByTime());
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
