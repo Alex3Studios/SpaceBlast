@@ -14,10 +14,11 @@ The goal is to win 3 out of the 5 available rounds in a battle. The first player
 
 ### Prerequisites
 
-To be able to play the game you need access to a build of the game as well as two controllers. To be able to make a build of the game from the project you 
+To be able to play the game you need access to a build of the game as well as two controllers. To be able to make a build of the game from the project you need access to Unity and follow these steps:
 
 * Access [the public github repo](https://github.com/Alex3Studios/SpaceBlast)
 * Clone the git repository OR download a zip file and extract it
+* Open the project in Unity
 * Go to File &rarr; Build Settings
 * Choose your preferred target platform
 * Press `Build`
