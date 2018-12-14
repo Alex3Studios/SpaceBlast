@@ -18,7 +18,7 @@ To be able to play the game you need access to a build of the game as well as tw
 
 ### Running the game
 
-Click on the build file, choose your preferred screen resolution and graphics quality and run it.
+Click on the build file, choose your preferred screen resolution and graphics quality and finally run it by pressing `Play!`.
 
 #### Example of gameplay
 
