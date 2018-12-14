@@ -654,6 +654,64 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1064894008}
+    - target: {fileID: 212264523132562834, guid: a4fda4304fd4f994592665d1aafdb867,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1145749573
+      objectReference: {fileID: 0}
+    - target: {fileID: 212264523132562834, guid: a4fda4304fd4f994592665d1aafdb867,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 212264523132562834, guid: a4fda4304fd4f994592665d1aafdb867,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 212264523132562834, guid: a4fda4304fd4f994592665d1aafdb867,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 212264523132562834, guid: a4fda4304fd4f994592665d1aafdb867,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 212264523132562834, guid: a4fda4304fd4f994592665d1aafdb867,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547990823228754, guid: a4fda4304fd4f994592665d1aafdb867, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 8.106956
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547990823228754, guid: a4fda4304fd4f994592665d1aafdb867, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 5.716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547990823228754, guid: a4fda4304fd4f994592665d1aafdb867, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.027
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547990823228754, guid: a4fda4304fd4f994592665d1aafdb867, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.7561
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938994022563740, guid: a4fda4304fd4f994592665d1aafdb867, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547990823228754, guid: a4fda4304fd4f994592665d1aafdb867, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891694139239482, guid: a4fda4304fd4f994592665d1aafdb867, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4fda4304fd4f994592665d1aafdb867, type: 2}
   m_IsPrefabAsset: 0
