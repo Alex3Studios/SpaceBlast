@@ -23,6 +23,8 @@ TagManager:
   - winnertext
   - countdown
   - music
+  - PlayerOneFuel
+  - PlayerOneGadget
   layers:
   - Default
   - TransparentFX

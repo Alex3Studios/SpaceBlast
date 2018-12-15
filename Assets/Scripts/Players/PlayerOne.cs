@@ -12,14 +12,12 @@ public class PlayerOne : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     private Player player1;
-    private Sprite jetpackOn;
-    private Sprite jetpackOff;
+    public Sprite jetpackOn;
+    public Sprite jetpackOff;
     public GameObject healthBar;
 
     void Start()
     {
-        jetpackOff = Resources.Load<GameObject>("Prefab/Gadgets/Jetpack_off").GetComponent<SpriteRenderer>().sprite;
-        jetpackOn = Resources.Load<GameObject>("Prefab/Gadgets/Jetpack_on").GetComponent<SpriteRenderer>().sprite;
         Sprite healthBarSprite = Resources.Load<Sprite>("Health/Health bar15");
         healthBar.GetComponent<SpriteRenderer>().sprite = healthBarSprite;
     }
@@ -45,17 +43,7 @@ public class PlayerOne : MonoBehaviour
             Shoot();
             Recoil(7);
         }
-        if (jetpackSlot && player1.GetButton("gadget"))
-        {
-            GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
-            fuel -= 1;
-            gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOn;
-            if (fuel < 1)
-            {
-                gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = null;
-            }
-        }
-        else if (player1.GetButtonDown("PowerUp"))
+        if (player1.GetButtonDown("PowerUp"))
         {
             GameObject weaponmanagerObject = transform.GetChild(1).gameObject;
             WeaponManager wm = weaponmanagerObject.GetComponent<WeaponManager>();
@@ -74,6 +62,16 @@ public class PlayerOne : MonoBehaviour
             else if (wm.activeWeapon != null)
             {
                 RemoveWeapon(ammoTextPlayerOne, wm);
+            }
+        }
+        if (jetpackSlot && player1.GetButton("gadget"))
+        {
+            GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
+            fuel -= 1;
+            gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOn;
+            if (fuel < 1)
+            {
+                gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = null;
             }
         }
         else if (jetpackSlot)

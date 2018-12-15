@@ -133,7 +133,7 @@ Transform:
   m_GameObject: {fileID: 1715527857066732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.7561, y: -0.027, z: 0}
-  m_LocalScale: {x: 8.106956, y: 5.716, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4766583665885942}
   m_RootOrder: 4
@@ -317,9 +317,12 @@ MonoBehaviour:
   health: 1000
   specialAmmo: 0
   maxAmmoCapacity: 0
+  fuel: 0
   firePoint: {fileID: 4817361297079866}
   bulletPrefab: {fileID: 1000012472556178, guid: df4449626a8841b4895c6fe6c0a9d466,
     type: 2}
+  jetpackOn: {fileID: 21300004, guid: 615105b1f655d1941add653fcc8b4506, type: 3}
+  jetpackOff: {fileID: 21300000, guid: 615105b1f655d1941add653fcc8b4506, type: 3}
   healthBar: {fileID: 0}
 --- !u!114 &114928310841962960
 MonoBehaviour:

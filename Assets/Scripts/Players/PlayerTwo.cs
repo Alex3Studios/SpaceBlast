@@ -9,9 +9,12 @@ public class PlayerTwo : MonoBehaviour
     public int health = 1000;
     public int specialAmmo;
     public int maxAmmoCapacity;
+    public int fuel;
     public Transform firePoint;
     public GameObject bulletPrefab;
     private Player player2;
+    public Sprite jetpackOn;
+    public Sprite jetpackOff;
     public GameObject healthBar;
     void Start()
     {
@@ -27,6 +30,7 @@ public class PlayerTwo : MonoBehaviour
     void Update()
     {
         GameObject ammoTextPlayerTwo = GameObject.FindGameObjectWithTag("PlayerTwoAmmo");
+        Sprite jetpackSlot = gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite;
         float MoveX = player2.GetAxis("RotateX");
         float MoveY = player2.GetAxis("RotateY");
         float heading = Mathf.Atan2(MoveY, MoveX);
@@ -59,6 +63,20 @@ public class PlayerTwo : MonoBehaviour
                 RemoveWeapon(ammoTextPlayerTwo, wm);
             }
 
+        }
+        if (jetpackSlot && player2.GetButton("gadget"))
+        {
+            GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
+            fuel -= 1;
+            gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOn;
+            if (fuel < 1)
+            {
+                gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = null;
+            }
+        }
+        else if (jetpackSlot)
+        {
+            gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOff;
         }
     }
 
