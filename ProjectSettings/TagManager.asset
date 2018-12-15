@@ -25,6 +25,8 @@ TagManager:
   - music
   - PlayerOneFuel
   - PlayerOneGadget
+  - PlayerTwoFuel
+  - PlayerTwoGadget
   layers:
   - Default
   - TransparentFX
