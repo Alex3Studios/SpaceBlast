@@ -10,6 +10,7 @@ public class PlayerTwo : MonoBehaviour
     public int specialAmmo;
     public int maxAmmoCapacity;
     public int fuel;
+    public int fuelCapacity;
     public Transform firePoint;
     public GameObject bulletPrefab;
     private Player player2;
@@ -30,6 +31,7 @@ public class PlayerTwo : MonoBehaviour
     void Update()
     {
         GameObject ammoTextPlayerTwo = GameObject.FindGameObjectWithTag("PlayerTwoAmmo");
+        GameObject fuelTextPlayerTwo = GameObject.FindGameObjectWithTag("PlayerTwoFuel");
         Sprite jetpackSlot = gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite;
         float MoveX = player2.GetAxis("RotateX");
         float MoveY = player2.GetAxis("RotateY");
@@ -69,9 +71,10 @@ public class PlayerTwo : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
             fuel -= 1;
             gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOn;
+            fuelTextPlayerTwo.GetComponent<UnityEngine.UI.Text>().text = fuel + "/" + fuelCapacity;
             if (fuel < 1)
             {
-                gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = null;
+                RemoveGadget(fuelTextPlayerTwo);
             }
         }
         else if (jetpackSlot)
@@ -89,6 +92,13 @@ public class PlayerTwo : MonoBehaviour
         ammoTextPlayerTwo.GetComponent<UnityEngine.UI.Text>().text = "  0" + "/" + "0";
     }
 
+    void RemoveGadget(GameObject fuelTextPlayerTwo)
+    {
+        GameObject gadget = GameObject.FindGameObjectWithTag("PlayerTwoGadget");
+        gadget.GetComponent<SpriteRenderer>().sprite = GameObject.FindGameObjectWithTag("PlayerTwoPowerUp").GetComponent<powerup>().defaultsprite;
+        gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = null;
+        fuelTextPlayerTwo.GetComponent<UnityEngine.UI.Text>().text = "  0" + "/" + "0";
+    }
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);

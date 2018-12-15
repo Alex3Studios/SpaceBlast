@@ -9,6 +9,7 @@ public class PlayerOne : MonoBehaviour
     public int specialAmmo;
     public int maxAmmoCapacity;
     public int fuel;
+    public int fuelCapacity;
     public Transform firePoint;
     public GameObject bulletPrefab;
     private Player player1;
@@ -31,6 +32,7 @@ public class PlayerOne : MonoBehaviour
     void Update()
     {
         GameObject ammoTextPlayerOne = GameObject.FindGameObjectWithTag("PlayerOneAmmo");
+        GameObject fuelTextPlayerOne = GameObject.FindGameObjectWithTag("PlayerOneFuel");
         Sprite jetpackSlot = gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite;
         float MoveX = player1.GetAxis("RotateX");
         float MoveY = player1.GetAxis("RotateY");
@@ -69,9 +71,10 @@ public class PlayerOne : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
             fuel -= 1;
             gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOn;
+            fuelTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = fuel + "/" + fuelCapacity;
             if (fuel < 1)
             {
-                gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = null;
+                RemoveGadget(fuelTextPlayerOne);
             }
         }
         else if (jetpackSlot)
@@ -87,6 +90,14 @@ public class PlayerOne : MonoBehaviour
         wm.activeWeapon = null;
         wm.GetComponent<SpriteRenderer>().sprite = null;
         ammoTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = "  0" + "/" + "0";
+    }
+
+    void RemoveGadget(GameObject fuelTextPlayerOne)
+    {
+        GameObject gadget = GameObject.FindGameObjectWithTag("PlayerOneGadget");
+        gadget.GetComponent<SpriteRenderer>().sprite = GameObject.FindGameObjectWithTag("PlayerOnePowerUp").GetComponent<powerup>().defaultsprite;
+        gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = null;
+        fuelTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = "  0" + "/" + "0";
     }
     void Shoot()
     {
