@@ -57,7 +57,11 @@ MonoBehaviour:
   - {fileID: 1524888782144842, guid: 02dd12bf96c15bf41ac9575ea90adae4, type: 2}
   - {fileID: 1335748679980986, guid: f40770828f508eb48990fdebc249e67a, type: 2}
   crate: {fileID: 1210632651308232, guid: 4c3a270fceb435f448b63748859926d3, type: 2}
-  respawnTimePlayer: 5
+  gadgetcrate: {fileID: 1926535301552648, guid: 0dc8f7344ef056d419eb6772cd1cdd46,
+    type: 2}
   initialCountdownGun: 5
   minSpawnTimeGun: 20
   maxSpawnTimeGun: 45
+  initialCountdownGadget: 8
+  minSpawnTimeGadget: 20
+  maxSpawnTimeGadget: 45

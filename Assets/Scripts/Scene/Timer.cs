@@ -7,13 +7,17 @@ public class Timer : MonoBehaviour
 
     public GameObject[] weaponList;
     public GameObject crate;
+
+    public GameObject gadgetcrate;
     float x1, x2, y1, y2;
-    public float respawnTimePlayer;
-    float playerRespawnTimer;
 
     public float initialCountdownGun = 5;
     public int minSpawnTimeGun;
     public int maxSpawnTimeGun;
+
+    public float initialCountdownGadget = 8;
+    public int minSpawnTimeGadget;
+    public int maxSpawnTimeGadget;
 
 
     // Use this for initialization
@@ -26,24 +30,17 @@ public class Timer : MonoBehaviour
     void Update()
     {
         initialCountdownGun -= Time.deltaTime;
+        initialCountdownGadget -= Time.deltaTime;
         if (initialCountdownGun <= 0)
         {
             initialCountdownGun = Random.Range(minSpawnTimeGun, maxSpawnTimeGun);
             SpawnRandomWeapon();
         }
-
-        /*if (GameObject.Find("PlayerOne") == null && GameObject.Find("PlayerOne(Clone)") == null)
+        if(initialCountdownGadget <= 0)
         {
-            playerRespawnTimer -= Time.deltaTime;
-            if (playerRespawnTimer <= 0)
-                SpawnPlayer("One");
+            initialCountdownGadget = Random.Range(minSpawnTimeGadget, maxSpawnTimeGadget);
+            SpawnRandomGadget();
         }
-        else if (GameObject.Find("PlayerTwo") == null && GameObject.Find("PlayerTwo(Clone)") == null)
-        {
-            respawnTimePlayer -= Time.deltaTime;
-            if (respawnTimePlayer <= 0)
-                SpawnPlayer("Two");
-        }*/
 
     }
     void GenerateRandomPosition()
@@ -74,59 +71,11 @@ public class Timer : MonoBehaviour
         Instantiate(crate, pos2, transform.rotation);
     }
 
-
-
-    /*void SpawnPlayer(string playerNumber)
+    void SpawnRandomGadget()
     {
         GenerateRandomPosition();
-        float playerOneX;
-        float playerOneY;
-        float playerTwoX;
-        float playerTwoY;
-        if (playerNumber == "Two")
-        {
-            var playerOne = GameObject.FindGameObjectWithTag("PlayerOne");
-            if(playerOne == null)
-            {
-                GenerateRandomPosition();
-            }
-            else
-            {
-                playerOneX = playerOne.transform.position.x;
-                playerOneY = playerOne.transform.position.y;
-                while (true)
-                {
-                    if (System.Math.Abs(x1 - playerOneX) < 10 || System.Math.Abs(y1 - playerOneY) < 10)
-                        GenerateRandomPosition();
-                    else
-                        break;
-                }
-            }
-        }
-        else
-        {
-            var playerTwo = GameObject.FindGameObjectWithTag("PlayerTwo");
-            if(playerTwo == null)
-            {
-                GenerateRandomPosition();
-            }
-            else
-            {
-                playerTwoX = playerTwo.transform.position.x;
-                playerTwoY = playerTwo.transform.position.y;
-                while (true)
-                {
-                    if (System.Math.Abs(x1 - playerTwoX) < 10 || System.Math.Abs(y1 - playerTwoY) < 10)
-                        GenerateRandomPosition();
-                    else
-                        break;
-                }
-            }
-        }
-
         Vector2 pos = new Vector2(x1, y1);
-        GameObject playerRespawn = (GameObject)Resources.Load("Prefab/Players/Player" + playerNumber, typeof(GameObject));
-        Instantiate(playerRespawn, pos, transform.rotation);
-        respawnTimePlayer = playerRespawnTimer;
-    }*/
+
+        Instantiate(gadgetcrate, pos, transform.rotation);
+    }
 }
