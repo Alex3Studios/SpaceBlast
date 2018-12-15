@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour {
 
-	// Called when Start Game button is pressed
+	/*************************************************************
+	 * Loads CountDown Scene when 'Start Game' button is pressed *
+	 ************************************************************/
 	public void StartGame () {
 		SceneManager.LoadScene("CountDown");
 	}
