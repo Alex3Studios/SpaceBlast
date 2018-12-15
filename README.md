@@ -5,7 +5,7 @@ Game by the team A^3 in the 3 week course SC-T-624-CGDD Computer Game Design & D
 Space, the final frontier. Two ships of opposing factions meet when one travelling gun merchant is taking a detour through enemy territory. The two ships crash and are damged badly. The only way for them to escape is to salvage parts from the enemy ship to repair their own to be able to fly away from this space's harsh environments. Their onboard gun system is offline & they leave their ships and fight out in space. 
 
 
-### Game-play
+## Game-play
 
 A two person shooter where players have to adapt to the environments of space where there is little gravity by moving with the force of shooting in opposite directions. 
 
