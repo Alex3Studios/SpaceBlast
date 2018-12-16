@@ -17,6 +17,7 @@ public class PlayerOne : MonoBehaviour
     public Sprite jetpackOff;
     public GameObject healthBar;
 
+
     void Start()
     {
         Sprite healthBarSprite = Resources.Load<Sprite>("Health/Health bar15");
@@ -31,55 +32,68 @@ public class PlayerOne : MonoBehaviour
     //Update Function
     void Update()
     {
-        GameObject ammoTextPlayerOne = GameObject.FindGameObjectWithTag("PlayerOneAmmo");
-        GameObject fuelTextPlayerOne = GameObject.FindGameObjectWithTag("PlayerOneFuel");
-        Sprite jetpackSlot = gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite;
-        float MoveX = player1.GetAxis("RotateX");
-        float MoveY = player1.GetAxis("RotateY");
-        float heading = Mathf.Atan2(MoveY, MoveX);
-        if (heading != 0)
-            transform.rotation = Quaternion.Euler(0f, 0f, heading * Mathf.Rad2Deg);
-
-        if (player1.GetButtonDown("Shoot"))
+        if (player1.GetButtonDown("Pause"))
         {
-            Shoot();
-            Recoil(7);
-        }
-        if (player1.GetButtonDown("PowerUp"))
-        {
-            GameObject weaponmanagerObject = transform.GetChild(1).gameObject;
-            WeaponManager wm = weaponmanagerObject.GetComponent<WeaponManager>();
-            if (specialAmmo > 0)
+            if (Time.timeScale == 0)
             {
-                float recoil = wm.Shoot(gameObject.tag);
-                Recoil(recoil);
-                if (recoil != 0)
+                Time.timeScale = 1;
+            }
+            else
+            {
+                Time.timeScale = 0;
+            }
+        }
+        if (Time.timeScale != 0)
+        {
+            GameObject ammoTextPlayerOne = GameObject.FindGameObjectWithTag("PlayerOneAmmo");
+            GameObject fuelTextPlayerOne = GameObject.FindGameObjectWithTag("PlayerOneFuel");
+            Sprite jetpackSlot = gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite;
+            float MoveX = player1.GetAxis("RotateX");
+            float MoveY = player1.GetAxis("RotateY");
+            float heading = Mathf.Atan2(MoveY, MoveX);
+            if (heading != 0)
+                transform.rotation = Quaternion.Euler(0f, 0f, heading * Mathf.Rad2Deg);
+            if (player1.GetButtonDown("Shoot"))
+            {
+                Shoot();
+                Recoil(7);
+            }
+            if (player1.GetButtonDown("PowerUp"))
+            {
+                GameObject weaponmanagerObject = transform.GetChild(1).gameObject;
+                WeaponManager wm = weaponmanagerObject.GetComponent<WeaponManager>();
+                if (specialAmmo > 0)
                 {
-                    specialAmmo -= 1;
-                    ammoTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = specialAmmo + "/" + maxAmmoCapacity;
+                    float recoil = wm.Shoot(gameObject.tag);
+                    Recoil(recoil);
+                    if (recoil != 0)
+                    {
+                        specialAmmo -= 1;
+                        ammoTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = specialAmmo + "/" + maxAmmoCapacity;
+                    }
+                    if (specialAmmo < 1)
+                        RemoveWeapon(ammoTextPlayerOne, wm);
                 }
-                if (specialAmmo < 1)
+                else if (wm.activeWeapon != null)
+                {
                     RemoveWeapon(ammoTextPlayerOne, wm);
+                }
             }
-            else if (wm.activeWeapon != null)
+            if (jetpackSlot && player1.GetButton("gadget"))
             {
-                RemoveWeapon(ammoTextPlayerOne, wm);
+                GetComponent<Rigidbody2D>().AddForce(transform.up * 75);
+                fuel -= 1;
+                gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOn;
+                fuelTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = fuel + "/" + fuelCapacity;
+                if (fuel < 1)
+                {
+                    RemoveGadget(fuelTextPlayerOne);
+                }
             }
-        }
-        if (jetpackSlot && player1.GetButton("gadget"))
-        {
-            GetComponent<Rigidbody2D>().AddForce(transform.up * 75);
-            fuel -= 1;
-            gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOn;
-            fuelTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = fuel + "/" + fuelCapacity;
-            if (fuel < 1)
+            else if (jetpackSlot)
             {
-                RemoveGadget(fuelTextPlayerOne);
+                gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOff;
             }
-        }
-        else if (jetpackSlot)
-        {
-            gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOff;
         }
     }
 

@@ -30,56 +30,70 @@ public class PlayerTwo : MonoBehaviour
     //Update Function
     void Update()
     {
-        GameObject ammoTextPlayerTwo = GameObject.FindGameObjectWithTag("PlayerTwoAmmo");
-        GameObject fuelTextPlayerTwo = GameObject.FindGameObjectWithTag("PlayerTwoFuel");
-        Sprite jetpackSlot = gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite;
-        float MoveX = player2.GetAxis("RotateX");
-        float MoveY = player2.GetAxis("RotateY");
-        float heading = Mathf.Atan2(MoveY, MoveX);
-        if (heading != 0)
-            transform.rotation = Quaternion.Euler(0f, 0f, heading * Mathf.Rad2Deg);
-
-        if (player2.GetButtonDown("Shoot"))
+        if (player2.GetButtonDown("Pause"))
         {
-            Shoot();
-            Recoil(7);
-        }
-        if (player2.GetButtonDown("PowerUp"))
-        {
-            GameObject weaponmanagerObject = transform.GetChild(1).gameObject;
-            WeaponManager wm = weaponmanagerObject.GetComponent<WeaponManager>();
-            if (specialAmmo > 0)
+            if (Time.timeScale == 0)
             {
-                float recoil = wm.Shoot(gameObject.tag);
-                Recoil(recoil);
-                if (recoil != 0)
+                Time.timeScale = 1;
+            }
+            else
+            {
+                Time.timeScale = 0;
+            }
+        }
+        if (Time.timeScale != 0)
+        {
+            GameObject ammoTextPlayerTwo = GameObject.FindGameObjectWithTag("PlayerTwoAmmo");
+            GameObject fuelTextPlayerTwo = GameObject.FindGameObjectWithTag("PlayerTwoFuel");
+            Sprite jetpackSlot = gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite;
+            float MoveX = player2.GetAxis("RotateX");
+            float MoveY = player2.GetAxis("RotateY");
+            float heading = Mathf.Atan2(MoveY, MoveX);
+            if (heading != 0)
+                transform.rotation = Quaternion.Euler(0f, 0f, heading * Mathf.Rad2Deg);
+
+            if (player2.GetButtonDown("Shoot"))
+            {
+                Shoot();
+                Recoil(7);
+            }
+            if (player2.GetButtonDown("PowerUp"))
+            {
+                GameObject weaponmanagerObject = transform.GetChild(1).gameObject;
+                WeaponManager wm = weaponmanagerObject.GetComponent<WeaponManager>();
+                if (specialAmmo > 0)
                 {
-                    specialAmmo -= 1;
-                    ammoTextPlayerTwo.GetComponent<UnityEngine.UI.Text>().text = specialAmmo + "/" + maxAmmoCapacity;
+                    float recoil = wm.Shoot(gameObject.tag);
+                    Recoil(recoil);
+                    if (recoil != 0)
+                    {
+                        specialAmmo -= 1;
+                        ammoTextPlayerTwo.GetComponent<UnityEngine.UI.Text>().text = specialAmmo + "/" + maxAmmoCapacity;
+                    }
+                    if (specialAmmo < 1)
+                        RemoveWeapon(ammoTextPlayerTwo, wm);
                 }
-                if (specialAmmo < 1)
+                else if (wm.activeWeapon != null)
+                {
                     RemoveWeapon(ammoTextPlayerTwo, wm);
-            }
-            else if (wm.activeWeapon != null)
-            {
-                RemoveWeapon(ammoTextPlayerTwo, wm);
-            }
+                }
 
-        }
-        if (jetpackSlot && player2.GetButton("gadget"))
-        {
-            GetComponent<Rigidbody2D>().AddForce(transform.up * 75);
-            fuel -= 1;
-            gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOn;
-            fuelTextPlayerTwo.GetComponent<UnityEngine.UI.Text>().text = fuel + "/" + fuelCapacity;
-            if (fuel < 1)
-            {
-                RemoveGadget(fuelTextPlayerTwo);
             }
-        }
-        else if (jetpackSlot)
-        {
-            gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOff;
+            if (jetpackSlot && player2.GetButton("gadget"))
+            {
+                GetComponent<Rigidbody2D>().AddForce(transform.up * 75);
+                fuel -= 1;
+                gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOn;
+                fuelTextPlayerTwo.GetComponent<UnityEngine.UI.Text>().text = fuel + "/" + fuelCapacity;
+                if (fuel < 1)
+                {
+                    RemoveGadget(fuelTextPlayerTwo);
+                }
+            }
+            else if (jetpackSlot)
+            {
+                gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOff;
+            }
         }
     }
 
