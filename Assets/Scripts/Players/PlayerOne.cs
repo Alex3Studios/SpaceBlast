@@ -86,7 +86,7 @@ public class PlayerOne : MonoBehaviour
     void RemoveWeapon(GameObject ammoTextPlayerOne, WeaponManager wm)
     {
         GameObject powerup = GameObject.FindGameObjectWithTag("PlayerOnePowerUp");
-        powerup.GetComponent<SpriteRenderer>().sprite = powerup.GetComponent<powerup>().defaultsprite;
+        powerup.GetComponent<SpriteRenderer>().sprite = powerup.GetComponent<PowerUp>().defaultsprite;
         wm.activeWeapon = null;
         wm.GetComponent<SpriteRenderer>().sprite = null;
         ammoTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = "  0" + "/" + "0";
@@ -95,7 +95,7 @@ public class PlayerOne : MonoBehaviour
     void RemoveGadget(GameObject fuelTextPlayerOne)
     {
         GameObject gadget = GameObject.FindGameObjectWithTag("PlayerOneGadget");
-        gadget.GetComponent<SpriteRenderer>().sprite = GameObject.FindGameObjectWithTag("PlayerOnePowerUp").GetComponent<powerup>().defaultsprite;
+        gadget.GetComponent<SpriteRenderer>().sprite = GameObject.FindGameObjectWithTag("PlayerOnePowerUp").GetComponent<PowerUp>().defaultsprite;
         gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = null;
         fuelTextPlayerOne.GetComponent<UnityEngine.UI.Text>().text = "  0" + "/" + "0";
     }

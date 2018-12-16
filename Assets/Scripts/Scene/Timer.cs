@@ -20,12 +20,6 @@ public class Timer : MonoBehaviour
     public int maxSpawnTimeGadget;
 
 
-    // Use this for initialization
-    void Start()
-    {
-        //playerRespawnTimer = respawnTimePlayer;
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -73,7 +67,6 @@ public class Timer : MonoBehaviour
 
     void SpawnRandomGadget()
     {
-        GenerateRandomPosition();
         Vector2 pos = new Vector2(5.65f, -7.28f);
 
         Instantiate(gadgetcrate, pos, transform.rotation);

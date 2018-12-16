@@ -2,23 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gadgetcrate : MonoBehaviour
+public class GadgetCrate : MonoBehaviour
 {
 
     public GameObject GadgetHere;
     public GameObject soundPrefab;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
