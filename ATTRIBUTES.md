@@ -20,6 +20,7 @@ The attributes used in the game Space Blast! and listed in the following section
 #### [Master484](https://opengameart.org/content/space-soldier-m484-games)
 
 * Character Models
+* Projectile Art
 
 #### [MortalPhoenix](https://opengameart.org/content/health-bar-0)
 
