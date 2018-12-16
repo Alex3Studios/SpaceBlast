@@ -1,7 +1,7 @@
 # Attributes in Space Blast!
 
 The attributes used in the game Space Blast! and listed in the following sections are borrowed from and credit goes to:
-All other in-game attributes are made by the game authors.
+
 
 ## Animation, Art & Models
 
@@ -64,3 +64,7 @@ All other in-game attributes are made by the game authors.
 #### [TinyWorlds](https://opengameart.org/content/explosion-0)
 
 * Explosion Sound Effect
+
+
+
+##### All other in-game attributes are made by the game authors.
