@@ -35,6 +35,7 @@ Click on the build file, choose your preferred screen resolution and graphics qu
 * Press `X` to shoot with the basic gun
 * Press `O` to shoot with special power-up guns
 * Press `ロ` or `R1` to move with gadget
+* Press 'Options' or 'Esc' to pause the game
 
 #### Example of gameplay
 
