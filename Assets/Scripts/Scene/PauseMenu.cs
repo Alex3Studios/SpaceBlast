@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
 	 *************************************************************/
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || player1.GetButtonDown("Pause") || player1.GetButtonDown("Pause"))
+        if (Input.GetKeyDown(KeyCode.Escape) || player1.GetButtonDown("Pause") || player2.GetButtonDown("Pause"))
         {
             if (gameIsPaused)
             {
