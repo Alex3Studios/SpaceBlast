@@ -47,7 +47,8 @@ Click on the build file, choose your preferred screen resolution and graphics qu
 
 #### Known problems 
 
-Description of known problems at a given time.
+* Animations of the buttons in the pause menu get stuck in 'Pressed mode' until scene is reloaded.
+* Unimplemented controller interactions with menu buttons.
 
 
 ## Built With and Compiled On
