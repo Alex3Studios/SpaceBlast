@@ -2,7 +2,7 @@
 
 Game by the team A^3 in the 3 week course SC-T-624-CGDD Computer Game Design & Development at the University of Reykjavík, fall 2018.
 
-Space, the final frontier. Two ships of opposing factions meet when one travelling gun merchant is taking a detour through enemy territory. The two ships crash and are damged badly. The only way for them to escape is to salvage parts from the enemy ship to repair their own to be able to fly away from this space's harsh environments. Their onboard gun system is offline & they leave their ships and fight out in space. 
+Space, the final frontier. Two ships of opposing factions meet when one travelling gun merchant is taking a detour through enemy territory. The two ships crash and are damaged badly. The only way for them to escape is to salvage parts from the enemy ship to repair their own and fly away from space's harsh environments. Their onboard gun system is offline so they leave their ships and fight out in a space battle for a chance to return home.
 
 
 ## Game-play
@@ -47,7 +47,7 @@ Click on the build file, choose your preferred screen resolution and graphics qu
 
 #### Known problems 
 
-* Animations of the buttons in the pause menu get stuck in 'Pressed mode' until scene is reloaded.
+* Animations of buttons in pause menu get stuck in 'Pressed mode' until scene is reloaded.
 * Unimplemented controller interactions with menu buttons.
 
 
