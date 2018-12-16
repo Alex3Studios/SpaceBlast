@@ -1,8 +1,8 @@
-## Attributes in Space Blast!
+# Attributes in Space Blast!
 
 The attributes used in the game Space Blast! and listed in the following sections are borrowed from and credit goes to:
 
-### Animation, Art & Models
+## Animation, Art & Models
 
 #### [Arnar Ingólfsson](https://www.linkedin.com/in/arnar-ing%C3%B3lfsson-84647252/)
 
@@ -44,18 +44,16 @@ The attributes used in the game Space Blast! and listed in the following section
 
 * Radical Lightning Effect
 
-### Fonts
+## Fonts
 
 * Retro2000 - [Vasily Draigo aka Daymarius](https://www.1001freefonts.com/retron2000.font)
 * BeatStreet- [Punkto Design](https://www.1001freefonts.com/beatstreet.font)
 
-### Sound
+## Sound
 
 #### [XCVG](https://opengameart.org/content/fast-fight-battle-music-looped)
 
 * Background Music
-
-### Sound Effects
 
 #### [MedicineStorm](https://opengameart.org/content/superpowers-assets-sound-effects)
 
@@ -63,4 +61,4 @@ The attributes used in the game Space Blast! and listed in the following section
 
 #### [TinyWorlds](https://opengameart.org/content/explosion-0)
 
-  * Explosion Sound Effect
+* Explosion Sound Effect
