@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour {
 
 	public static bool gameIsPaused = false;
-	public static bool helpIsSelected = false;
 	public GameObject pauseMenuUI;
+	public GameObject helpMenuUI;
 	
 	// Update is called once per frame
 	void Update () {
@@ -34,7 +34,14 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void Help() {
-		Debug.Log("Help is selected");
+		//Debug.Log("Help is selected");
+		pauseMenuUI.SetActive(false);
+		helpMenuUI.SetActive(true);
+	}
+
+	public void quitHelp() {
+		helpMenuUI.SetActive(false);
+		pauseMenuUI.SetActive(true);
 	}
 
 	public void quitGame() {
