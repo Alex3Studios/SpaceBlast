@@ -34,7 +34,7 @@ Click on the build file, choose your preferred screen resolution and graphics qu
 * Move player over power-up boxes to pick them up
 * Press `X` to shoot with the basic gun
 * Press `O` to shoot with special power-up guns
-* Press `square` or `R1` to move with gadget
+* Press `ロ` or `R1` to move with gadget
 
 #### Example of gameplay
 
