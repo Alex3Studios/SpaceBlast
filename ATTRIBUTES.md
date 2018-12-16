@@ -31,10 +31,10 @@ The attributes used in the game Space Blast! and listed in the following section
 * Asteroids
 
 #### [DieMango](https://opengameart.org/content/gun-sprites-3)
-* Pistol
 * Bazooka
 * Rifle
 * Ricochet
+* Force Gun
 
 #### [Qubodup](https://opengameart.org/content/drawn-crate-box-100)
 
