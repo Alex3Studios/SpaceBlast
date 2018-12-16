@@ -38,10 +38,6 @@ The attributes used in the game Space Blast! and listed in the following section
 * Rifle
 * Ricochet
 
-### [Cpt_Flash](https://opengameart.org/content/2d-wooden-box)
-
-* Weapon Crate
-
 ### [Qubodup](https://opengameart.org/content/drawn-crate-box-100)
 
 * Weapon and Gadget Lootboxes
