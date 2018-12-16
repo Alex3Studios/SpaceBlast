@@ -8,9 +8,25 @@ The attributes used in the game Space Blast! and listed in the following section
 * Background
 * Borders
 
+### [Bonsaiheldin](https://opengameart.org/content/sci-fi-space-simple-bullets)
+
+* Additional Bullet Art
+
+### [Dannorder](https://opengameart.org/content/monkey-on-mars-share-the-love)
+
+* Jetpack Art
+
 ### [Master484](https://opengameart.org/content/space-soldier-m484-games)
 
 * Character Models
+
+### [MedicineStorm](https://opengameart.org/content/superpowers-assets-sound-effects)
+
+* Weapon Pickup Sound Effect
+
+### [MortalPhoenix](https://opengameart.org/content/health-bar-0)
+
+* Health Bar Art
 
 ### [Phaelax](https://forum.thegamecreators.com/thread/209786)
 
@@ -26,6 +42,14 @@ The attributes used in the game Space Blast! and listed in the following section
 
 * Weapon Crate
 
+### [Qubodup](https://opengameart.org/content/drawn-crate-box-100)
+
+* Weapon and Gadget Lootboxes
+
+### [13rice](https://opengameart.org/content/radial-lightning-effect)
+
+* Radical Lightning Effect
+
 ### Fonts
 
 * Retro2000 - [Vasily Draigo aka Daymarius](https://www.1001freefonts.com/retron2000.font)
@@ -33,10 +57,12 @@ The attributes used in the game Space Blast! and listed in the following section
 
 ### Sound
 
-#### [Amac1990](https://opengameart.org/content/karma8-bit)
+#### [XCVG](https://opengameart.org/content/fast-fight-battle-music-looped)
 
 * Background Music
 
-#### Sound Effects
+### Sound Effects
 
-* 
+#### [TinyWorlds](https://opengameart.org/content/explosion-0)
+
+  * Explosion Sound Effect
