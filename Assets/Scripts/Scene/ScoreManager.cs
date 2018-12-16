@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
     public Sprite Green;
 
     public Sprite Yellow;
-
+    
     private Rounds roundmanager;
 
     private int frame;
