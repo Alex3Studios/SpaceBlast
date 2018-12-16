@@ -51,10 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bb66dc8cc6c4491a92aa84608cd9f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AsteroidPrefab: {fileID: 0}
+  AsteroidPrefab: {fileID: 1524084541673512, guid: dc11836d01d244739a8009d4d1cdd344,
+    type: 2}
   center: {x: 5.5, y: -5.5}
   size: {x: 30, y: 30}
   spawnWait: 0
-  spawnMaxWait: 10
-  spawnMinWait: 1
+  spawnMaxWait: 16
+  spawnMinWait: 6
   startWait: 3

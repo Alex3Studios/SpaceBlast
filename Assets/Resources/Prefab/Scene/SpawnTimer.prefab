@@ -62,6 +62,6 @@ MonoBehaviour:
   initialCountdownGun: 5
   minSpawnTimeGun: 20
   maxSpawnTimeGun: 45
-  initialCountdownGadget: 8
-  minSpawnTimeGadget: 20
+  initialCountdownGadget: 20
+  minSpawnTimeGadget: 25
   maxSpawnTimeGadget: 45

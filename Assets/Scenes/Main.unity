@@ -545,22 +545,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 114465645650401288, guid: 3ff4419469910482b922ad9aa7b8fc5c,
-        type: 2}
-      propertyPath: AsteroidPrefab
-      value: 
-      objectReference: {fileID: 1524084541673512, guid: dc11836d01d244739a8009d4d1cdd344,
-        type: 2}
-    - target: {fileID: 114465645650401288, guid: 3ff4419469910482b922ad9aa7b8fc5c,
-        type: 2}
-      propertyPath: spawnMaxWait
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 114465645650401288, guid: 3ff4419469910482b922ad9aa7b8fc5c,
-        type: 2}
-      propertyPath: spawnMinWait
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ff4419469910482b922ad9aa7b8fc5c, type: 2}
   m_IsPrefabAsset: 0

@@ -36,7 +36,7 @@ public class Timer : MonoBehaviour
             initialCountdownGun = Random.Range(minSpawnTimeGun, maxSpawnTimeGun);
             SpawnRandomWeapon();
         }
-        if(initialCountdownGadget <= 0)
+        if (initialCountdownGadget <= 0)
         {
             initialCountdownGadget = Random.Range(minSpawnTimeGadget, maxSpawnTimeGadget);
             SpawnRandomGadget();
@@ -74,7 +74,7 @@ public class Timer : MonoBehaviour
     void SpawnRandomGadget()
     {
         GenerateRandomPosition();
-        Vector2 pos = new Vector2(x1, y1);
+        Vector2 pos = new Vector2(5.65f, -7.28f);
 
         Instantiate(gadgetcrate, pos, transform.rotation);
     }

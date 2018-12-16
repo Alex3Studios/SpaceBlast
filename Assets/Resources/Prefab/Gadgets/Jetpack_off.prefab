@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gadget: {fileID: 1749895864425460}
-  fuel: 500
+  fuel: 250
 --- !u!212 &212540524301944404
 SpriteRenderer:
   m_ObjectHideFlags: 1

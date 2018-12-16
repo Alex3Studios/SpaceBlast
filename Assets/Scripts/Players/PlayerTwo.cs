@@ -68,7 +68,7 @@ public class PlayerTwo : MonoBehaviour
         }
         if (jetpackSlot && player2.GetButton("gadget"))
         {
-            GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
+            GetComponent<Rigidbody2D>().AddForce(transform.up * 75);
             fuel -= 1;
             gameObject.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = jetpackOn;
             fuelTextPlayerTwo.GetComponent<UnityEngine.UI.Text>().text = fuel + "/" + fuelCapacity;
