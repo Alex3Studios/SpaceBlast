@@ -19,7 +19,9 @@ public class Countdown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Time.timeScale);
     }
+
     IEnumerator countdowner()
     {
         for (int i = number; i > 0; i--)
