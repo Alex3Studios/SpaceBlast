@@ -4,6 +4,10 @@ The attributes used in the game Space Blast! and listed in the following section
 
 ## Animation, Art & Models
 
+#### [13rice](https://opengameart.org/content/radial-lightning-effect)
+
+* Radical Lightning Effect
+
 #### [Arnar Ingólfsson](https://www.linkedin.com/in/arnar-ing%C3%B3lfsson-84647252/)
 
 * Background
@@ -16,6 +20,12 @@ The attributes used in the game Space Blast! and listed in the following section
 #### [Dannorder](https://opengameart.org/content/monkey-on-mars-share-the-love)
 
 * Jetpack Art
+
+#### [DieMango](https://opengameart.org/content/gun-sprites-3)
+* Bazooka
+* Rifle
+* Ricochet
+* Force Gun
 
 #### [Master484](https://opengameart.org/content/space-soldier-m484-games)
 
@@ -30,19 +40,10 @@ The attributes used in the game Space Blast! and listed in the following section
 
 * Asteroids
 
-#### [DieMango](https://opengameart.org/content/gun-sprites-3)
-* Bazooka
-* Rifle
-* Ricochet
-* Force Gun
-
 #### [Qubodup](https://opengameart.org/content/drawn-crate-box-100)
 
 * Weapon and Gadget Lootboxes
 
-#### [13rice](https://opengameart.org/content/radial-lightning-effect)
-
-* Radical Lightning Effect
 
 ### Fonts
 
