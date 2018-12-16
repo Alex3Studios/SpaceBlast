@@ -47,8 +47,8 @@ public class Timer : MonoBehaviour
     {
         x1 = Random.Range(-16.5f, 27.5f);
         x2 = Random.Range(-16.5f, 27.5f);
-        y1 = Random.Range(-18f, 8.5f);
-        y2 = Random.Range(-18f, 8.5f);
+        y1 = Random.Range(-20f, 8f);
+        y2 = Random.Range(-20f, 8f);
         if (System.Math.Abs(x1 - x2) < 8 || System.Math.Abs(y1 - y2) < 8)
             GenerateRandomPosition();
     }
