@@ -38,6 +38,7 @@ Click on the build file, choose your preferred screen resolution and graphics qu
 #### Example of gameplay
 
 PICTURES
+![Main Screen](http://oi65.tinypic.com/296knxs.jpg)
 
 
 #### Known problems 
